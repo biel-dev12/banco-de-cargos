@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Banco de Cargos</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="./imgs/fav-doctors.svg"
+      type="image/x-icon"
+    />
+    <script src="config.js" type="text/javascript" defer></script>
+  </head>
+  <body>
+    <main id="main-content">
+      <div class="border">
+        <section class="container">
+          <main class="form-box">
+            <header>
+              <h1>Banco de Cargos</h1>
+            </header>
+            <section class="search">
+            <label for="searchInp">Digite o cargo:</label>
+              <input type="text" id="searchInp" placeholder="Ex: Porteiro" />
+              <button type="submit" id="searchBtn">Pesquisar</button>
+            </section>
+            <div id="print">
+                <p class="error"></p>
+                <p class="cargo"></p>
+                <p class="desc"></p>
+                <p class="riscos"></p>
+                <p class="exames"></p>
+            </div>
+          </main>
+        </section>
+      </div>
+    </main>
+
+    <script id="jsonD" type="application/json">
+      [
+        {
+          "cargo": "Açougueiro",
+          "desc": "Desenvolve atividades operacionais envolvendo recebimento, corte e preparo de carnes para venda, recebe os produtos de carne e verifica sua qualidade, realiza o corte, desossa, moagem e preparação das carnes de acordo com as especificações, pesa, embala e rotula os produtos de carne adequadamente, mantém a higiene e limpeza do local de trabalho e dos equipamentos, assegura o cumprimento das normas de segurança alimentar e regulamentos, opera máquinas e ferramentas de corte com destreza e segurança, prepara produtos de carne fresca, marinada e temperada conforme demanda, oferece informações aos clientes sobre tipos de carne, cortes e preparo, auxilia os clientes na seleção de produtos e fornece recomendações, repõe o balcão de vendas com produtos de carne de forma atraente, embala os produtos de carne de acordo com as preferências dos clientes, mantém registros precisos de inventário e vendas, colabora na limpeza geral do açougue e na organização de estoque.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Ajudante",
+          "desc": "Desenvolve atividades operacionais envolvendo suporte e apoio, incluindo o carregamento e descarregamento na obra de materiais diversos, tais como sacos de cimento, areia, pedra, pisos, tijolos, escoras, etc., efetua o transporte de materiais diversos dentro dos ambientes da obra, realiza o transporte e descarte de entulhos em geral, como papelões, restos de cimento, concreto, tijolos, ferros, etc., executa a organização de áreas internas e externas, do canteiro de obras, sanitários, vestiários, refeitório, almoxarifado, escritório, etc., efetua demolições manuais, tais como quebra de paredes, pisos, etc., executa e acompanha a execução de concretagens em blocos de fundações, pilares, lajes, vigas, cintas, etc., efetua a limpeza e varrição da obra e de equipamentos e ferramentas em geral, tais como refeitório, almoxarifado, escritório, ambientes em geral da obra, masseira, pás, enxadas, carrinhos, etc., prepara massas em geral de forma manual ou com auxílio de masseira/misturador.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Ajudante de Açougueiro",
+          "desc": "Desenvolve atividades operacionais envolvendo auxílio ao Açougueiro relacionadas a recebimento, corte e preparo de carnes para venda, executar a limpeza do setor, varrer, lavar e limpar ambientes, mobiliário, superfícies, utensílios, equipamentos, preparar equipamentos, com limpeza e remoção de resíduos, recebe peças brutas, confere especificações dos produtos recebidos, avalia a qualidade de produtos recebidos, armazena produtos em câmaras frigoríficas, busca peças em câmaras frigoríficas e desossa, conforme tipo e corte, acondiciona peças e produtos em ganchos para trabalho e exposição a clientes, retorna produtos para câmaras frigoríficas, atende pedidos de clientes, retira produtos solicitados das câmaras frigoríficas, disponibiliza produtos em mesas, plataformas e suportes, promove o levantamento e transporte de materiais e cargas gerais de trabalho.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Ajudante de Armador",
+          "desc": "Desenvolve atividades em suporte e apoio dos Armadores incluindo a montagem de armações de estruturas em concreto armado em geral, tais como bases, blocos, lajes, pilares, vigas, etc.; prepara bancadas e suportes de trabalho; prepara o gabarito em bancada e suportes de trabalho; monta e instala máquinas de corte e dobra de ferros; recebe ferragens diversas e acondiciona em local da obra separa para esse fim; mede ferragens para corte e dobra; efetua a dobra e/ou corte de ferragens conforme projeto em bancada com gabarito; executa a amarração de ferragens de bases, blocos, lajes, pilares, vigas, etc.; relaciona materiais para a armação de ferragens; verifica projetos de formas e estruturas; promove o levantamento, transporte e deposição de materiais, incluindo ferros, armações montadas, ferramentas, peças, etc.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Ajudante de Azulejista",
+          "desc": "Desenvolve atividades em suporte e apoio dos Azulejistas incluindo a atividades de aplicação de revestimentos em geral em pisos, paredes, muros e muretas em salas, cozinhas, banheiros, quartos e sacadas; realização de nível manual ou a laser; execução de contrapiso em pisos; realização de reboco em paredes; execução de regularizações em geral; aplicação de massa cola de revestimentos; aplicação de revestimentos de materiais, tamanhos e formas variados em salas, cozinhas, banheiros, quartos e sacadas; executa cortes, lixamento e ajustes em revestimentos para aplicação em quinas, sobre ralos, quadros, etc. preparação de massas em geral de revestimento; promove o levantamento, transporte e deposição de materiais, incluindo ferramentas, revestimentos, madeiras, sacos de massa de revestimento, entulho, etc.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Ajudante de Carpinteiro",
+          "desc": "Desenvolve atividades em suporte e apoio dos Carpinteiros incluindo a montagem e desmontagem de fôrmas, caixarias, estruturas, bases, escoramentos, andaimes, plataformas, área de vivência, incluindo locais para engenharia, escritório, almoxarifado, refeitório, sanitários, vestiários, área de armação, serra circular, baias de resíduos, além de proteções diversas, incluindo escadas, rampas, passarelas, guarda corpos, bandejas, vedações, isolamentos, etc.; efetua demolições manuais, tais como quebra de paredes, pisos, madeiramento de telhado, telhas, etc.; realiza escavações, fundações, desmontes manuais de terra para a execução de blocos de ligação, cintas, vigas baldrames, blocos de fundações, etc.; executa e acompanha a execução de concretagens em blocos de ligação, blocos de fundações, pilares, lajes, vigas, cintas, etc.; promove o levantamento, transporte e deposição de materiais, incluindo ferramentas, peças, madeiras, ferros, areia, entulho, etc.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Ajudante de Confeiteiro",
+          "desc": "Desenvolve atividades operacionais envolvendo auxílio ao Confeiteiro relacionadas a fabricação de doces e salgados e seus derivados; executar a limpeza do setor, varrer, lavar e limpar ambientes, mobiliário, superfícies, utensílios, equipamentos; preparar equipamentos, com limpeza e remoção de resíduos, regular controles de tempo do processo, velocidade de misturadores, espessura de laminação, etc.; movimentar matéria-prima a ser utilizada na fabricação de produtos e disponibilizar para início do processo; acompanhar o processo que envolve pesar, medir, adicionar componentes e acionar equipamentos; auxilia no pré-preparo dos produtos, posicionando a o mesmo em locais apropriados; embalar produtos prontos; colocar e retirar produtos em fornos; encaminhar produtos prontos para comercialização.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Ajudante de Confeiteiro",
+          "desc": "Desenvolve atividades operacionais envolvendo auxílio ao Confeiteiro na fabricação de doces e salgados; recebe informação de produção com as necessidades de fabricação (doces, bolos, pudins, tortas, biscoitos); requisita e retira quantidade de matéria-prima (farinha, fermento, açúcar, ovos, componentes químicos, etc.); prepara equipamentos, com limpeza e remoção de resíduos, regula controles de tempo do processo, velocidade de misturadores, espessura de laminação, etc.; pesa, mede, adiciona componentes e aciona equipamentos; elabora massas, mistura, bate, cilindra, molda e coloca para assar; acompanha a homogeneização dos produtos; prepara recheios, coberturas e caldas para o acabamento do confeito; embala produtos prontos; coloca e retira produtos em fornos; limpa e lava o ambiente, mesas, balcões, superfícies, pias, equipamentos e utensílios utilizados; coleta amostras; pesquisa e desenvolve novas receitas de produtos e simulares em função da demanda de clientes ou diversidade dos produtos.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Ajudante de Eletricista",
+          "desc": "Desenvolve atividades em suporte e apoio dos Eletricistas incluindo a montagem, desmontagem e testes de instalações elétricas provisórias e permanentes de obra (robôs, tomadas, interruptores, painéis, quadros e fiações elétricas, padrões de entrada, gerador, medidores, aterramento); efetua demolições manuais tais como quebra de paredes, pisos, excessos de concreto, etc.; realiza escavações, desmontes manuais de terra, aterramento; executa marcações em geral envolvendo fiações elétricas, conduítes, caixas de passagem, mangueiras, quadros elétricos, aterramento, alarme, internet, telefonia; acompanha concretagens; promove o transporte de materiais, incluindo ferramentas, fiações, caixas, tomadas, conduites, robôs, fitas, etc.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Ajudante de Encanador",
+          "desc": "Desenvolve atividades em suporte e apoio dos Encanadores incluindo a montagem, desmontagem e testes de instalações hidrosanitárias provisórias e permanentes de obra, tais como tubulações de esgoto, água fria, água quente, sistemas de gás encanado, sistemas de drenagem, sistemas de combate a incêndio, louças e metais sanitários, moto bombas, estação redutora de pressão; efetua demolições manuais, tais como quebra de paredes, pisos, etc.; realiza escavações, desmontes manuais de terra, relacionados à ligações de água e esgoto, instalação de tubulações, registros, etc.; executa a marcação, em lajes a serem concretadas, da posição de tubulações de esgoto, água fria, água quente, sistemas de gás encanado, sistemas de combate a incêndio, etc.; acompanha concretagens; promove o levantamento, transporte e deposição de materiais, tais como ferramentas, tubulações, louças e metais sanitários, acessórios e materiais diversos, etc.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Ajudante de Hidráulica",
+          "desc": "Desenvolve atividades operacionais envolvendo montagem, desmontagem e testes de instalações hidrosanitárias provisórias e permanentes de obra, tais como tubulações de esgoto, água fria, água quente, sistemas de gás encanado, sistemas de drenagem, sistemas de combate a incêndio, louças e metais sanitários, moto bombas, estação redutora de pressão; efetua pequenas demolições manuais, tais como quebra de paredes, pisos, etc.; realiza pequenas escavações, desmontes manuais de terra, relacionados à ligações de água e esgoto, instalação de tubulações, registros, etc.; executa a marcação, em lajes a serem concretadas, da posição de tubulações de esgoto, água fria, água quente, sistemas de gás encanado, sistemas de combate a incêndio, etc.; acompanha concretagens; promove o levantamento, transporte e deposição de materiais, tais como ferramentas, tubulações, louças e metais sanitários, acessórios e materiais diversos, etc",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Ajudante de Impermeabilizador",
+          "desc": "Desenvolve atividades em suporte e apoio dos Impermeabilizadores incluindo a aplicação de revestimentos de impermeabilização sobre lajes, muros, paredes, sanitários, lavabos, cozinhas, áreas técnicas, sacadas, caixas d’água, reservatórios, etc.; aplicação de revestimentos líquidos impermeabilizantes em caixas d’água, reservatórios; aplicação de rolos de mantas impermeabilizantes sobre lajes, pisos e muros; efetua o transporte de materiais diversos dentro dos ambientes da obra, tais como rolos de mantas, cimento, tijolos, madeiras, ferros, etc.; realização de testes de estanqueidade em lajes, muros, paredes, sanitários, lavabos, cozinhas, áreas técnicas, sacadas, caixas d’água, reservatórios, etc.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Ajudante de Marmoraria",
+          "desc": "Desenvolve atividades em suporte e apoio dos Serradores de Mármore incluindo o transporte, preparação e instalação de pedras em ambientes diversos, recebe, auxilia no transporte, acompanha estocagem, executa corte, lixamento e polimento de pedras, aplica ceras de polimento, prepara pequenas porções de massa para assentamento de pedras, executa pequenos acabamentos na instalação, instala pedras acabadas, promove levantamento, transporte e deposição de materiais envolvendo materiais diversos de escritório, etc.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Ajudante de Mecânico",
+          "desc": "Desenvolve atividades em suporte e apoio dos Mecânicos, incluindo atividades de manutenção mecânica de máquinas, equipamentos e instalações da empresa; analisa, prepara, atende a programações; executa desmontagem de peças e instalações; inspeciona e revisa máquinas, equipamentos e instalações; repara defeitos em defeitos; substitui peças; lubrifica; remonta; realiza reposição de peças e acessórios; retesta; interpreta desenhos e esquemas mecânicos; solicita remoção, substituição e reparos; solicita orçamentos; efetua inspeções de rotina, preventivas, preditivas e corretivas; promove levantamento, transporte e deposição de materiais diversos.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Ajudante de Motorista",
+          "desc": "Desenvolve atividades em suporte e apoio dos Motoristas incluindo o levantamento, transporte e deposição de materiais, tais como ferramentas, sacos de cimento, areia, pedra, caixas, tubulações, louças e metais sanitários, acessórios e materiais diversos, etc., desde o local de carregamento e deste para o ponto de descarregamento, determinado em obra; carrega, organiza e amarra cargas em caminhão; desamarra e descarrega cargas do caminhão; auxilia no trânsito na entrada e saída de caminhão",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Ajudante de Obra",
+          "desc": "Desenvolve atividades operacionais envolvendo suporte e apoio, incluindo o carregamento e descarregamento na obra de materiais diversos, tais como sacos de cimento, areia, pedra, pisos, tijolos, escoras, etc., efetua o transporte de materiais diversos dentro dos ambientes da obra, realiza o transporte e descarte de entulhos em geral, como papelões, restos de cimento, concreto, tijolos, ferros, etc., executa a organização de áreas internas e externas, do canteiro de obras, sanitários, vestiários, refeitório, almoxarifado, escritório, etc., efetua demolições manuais, tais como quebra de paredes, pisos, etc., executa e acompanha a execução de concretagens em blocos de fundações, pilares, lajes, vigas, cintas, etc., efetua a limpeza e varrição da obra e de equipamentos e ferramentas em geral, tais como refeitório, almoxarifado, escritório, ambientes em geral da obra, masseira, pás, enxadas, carrinhos, etc., prepara massas em geral de forma manual ou com auxílio de masseira/misturador.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Ajudante de Padeiro",
+          "desc": "Desenvolve atividades operacionais envolvendo auxílio e suporte na padaria, auxilia na preparação de massas e ingredientes, pesando e medindo os componentes necessários, mistura os ingredientes para criar a massa de pães e outros produtos de panificação, molda a massa de acordo com as especificações, criando pães, bolos e outros produtos, opera e monitora o funcionamento de equipamentos de panificação, como fornos e batedeiras, assegura que os produtos estejam sendo assados e preparados de acordo com os padrões de qualidade, verifica a temperatura e o tempo de cozimento para garantir resultados ideais, realiza a limpeza e a manutenção dos equipamentos e utensílios utilizados na produção, colabora com o padeiro na criação de novas receitas e produtos, embala os produtos acabados para exibição e venda, organiza a exibição dos produtos nas vitrines, reabastece os mostruários conforme necessário, atende os clientes, fornece informações sobre produtos e auxilia nas vendas.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Ajudante de Serrador de Mármore",
+          "desc": "Desenvolve atividades em suporte e apoio dos Serradores de Mármore incluindo o transporte, preparação e instalação de pedras em ambientes diversos; recebe, auxilia no transporte, acompanha estocagem; executa corte, lixamento e polimento de pedras; aplica ceras de polimento; prepara pequenas porções de massa para assentamento de pedras; executa pequenos acabamentos na instalação; instala pedras acabadas; promove levantamento, transporte e deposição de materiais envolvendo materiais diversos de escritório, etc.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Ajudante de Serralheiro",
+          "desc": "Desenvolve atividades operacionais envolvendo suporte e apoio em serviços de serralheria, auxilia na preparação e organização dos materiais e ferramentas necessários, realiza cortes e ajustes em peças metálicas conforme instruções, auxilia na soldagem e montagem de estruturas metálicas, efetua a medição e marcação de peças, auxilia na instalação e reparação de portões, grades e esquadrias, ajuda no transporte e movimentação de peças e materiais, realiza o acabamento e polimento de peças, auxiliar na manutenção preventiva de equipamentos e ferramentas, auxilia na organização e limpeza do local de trabalho, acompanha procedimentos específicos da serralheria, segue as instruções do serralheiro responsável, contribui para a resolução de problemas e desafios diários, auxilia no atendimento e orientação a clientes, zela pela qualidade e precisão das peças produzidas, auxilia na elaboração de orçamentos e projetos, realiza outras atividades conforme necessidade e orientação",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Almoxarife",
+          "desc": "Desenvolve atividades operacionais envolvendo controle do almoxarifado, organiza e controla os materiais no almoxarifado, recebe e verifica as entregas de materiais de construção, registra e etiqueta os materiais recebidos, armazena os materiais de forma adequada e organizada, realiza inventário regular dos estoques, atualiza e mantém registros de entrada e saída de materiais, faz requisições de materiais para suprir as demandas da obra, acompanha o consumo de materiais e solicita reposições quando necessário, prepara e embala os materiais para transporte interno, faz a conferência e entrega dos materiais solicitados pelos setores da obra, controla e registra a saída de materiais para empreiteiros e subempreiteiros, verifica a qualidade dos materiais recebidos e rejeita os que estiverem em desacordo, atende as solicitações de materiais dos colaboradores da obra, mantém o almoxarifado limpo e organizado, realiza a gestão do estoque, evitando desperdícios.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Analista Contábil ",
+          "desc": "Realiza atividades burocráticas em geral no escritório da empresa envolvendo as áreas de contabilidade, auditoria e finanças; recebimento e conferência de documentos processados sobre movimentação contábil e financeira; verificação de notas fiscais; apuração de faturamento; análise recolhimento de impostos; conferência de contas a pagar e a receber; apuração, análise, processamento e correção de dados; classificação de documentos; lançamentos contábeis; preparação de informações para apuração dos resultados periódicos da empresa; análise de retenção de impostos retidos; registro e controle de retenção do tributo; conciliação contábil dos pagamentos a fornecedores",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Analista de Departamento de Pessoal",
+          "desc": "Desenvolve atividades administrativas envolvendo as áreas de recursos humanos, administração, finanças e logística, presta suporte na elaboração e atualização de folhas de pagamento, auxilia na administração de benefícios e plano de saúde, colabora na emissão e controle de documentos relacionados a admissões e demissões, presta assistência na elaboração de contratos e termos de trabalho, auxilia na organização de registros e informações dos colaboradores, colabora na gestão de ponto e controle de presenças e faltas, auxilia na comunicação e orientação aos colaboradores sobre questões relacionadas a salários e benefícios, presta suporte na organização e arquivamento de documentos trabalhistas, colabora na coordenação de processos de recrutamento e seleção, auxilia na comunicação com órgãos governamentais e sindicatos, presta assistência na resolução de questões e dúvidas dos colaboradores, auxilia na elaboração de relatórios e análises de indicadores de RH.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Analista de Recursos Humanos",
+          "desc": "Desenvolve atividades administrativas envolvendo rotinas de departamento de pessoal; auxilia na conferência e lançamento de informações; colabora no cálculo e na contabilização dos encargos sociais; presta suporte na administração e controle dos benefícios oferecidos aos funcionários; auxilia na manutenção e atualização dos registros e arquivos dos documentos; participa do processo de admissão de novos funcionários; contribui no preparo e envio de declarações e obrigações acessórias aos órgãos governamentais; auxilia no controle das férias e licenças dos colaboradores; presta suporte no cálculo e processamento das rescisões contratuais; auxilia na orientação dos funcionários; colabora na elaboração e implementação de políticas e procedimentos; participa da gestão dos programas de saúde e segurança no trabalho; mantém-se atualizado sobre as leis trabalhistas e previdenciárias vigentes; contribui na realização de auditorias internas e externas; auxilia em treinamentos e capacitações.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Apontador",
+          "desc": "Realiza atividades burocráticas em geral no escritório da obra envolvendo atendimento telefônico, envio e recebimento de e-mails, solicitações de pedidos, conferência de materiais, controle de estoques, preenchimento de check lists, administração de pessoal na obra, incluindo controle de ponto, banco de horas, e outros controles de pessoal via sistema interno da empresa, elaboração de relatórios, estatísticas, etc.; executa atividades burocráticas em geral na obra, como preenchimento de relatórios, check lists, verificações, análises, conferências, validações, etc.; efetua inspeções técnicas em obra, veículos, máquinas, equipamentos, ferramentas, materiais e produtos diversos; acompanha concretagens; promove levantamento, transporte e deposição de materiais envolvendo materiais diversos de escritório, etc.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Aprendiz",
+          "desc": "Desenvolve atividades administrativas em geral envolvendo apoio e suporte nas áreas de recursos humanos, administração, finanças e logística; atendimento telefônico; envio e recebimento de e-mails; solicitações de pedidos; preenchimento de check lists; administração de pessoal na empresa e suas obras, incluindo controle de ponto, banco de horas, e outros controles de pessoal; elaboração de relatórios, estatísticas, etc.; organização e controle de documentos; atualização de arquivos e cadastros; digitação, revisão e emissão de documentos, e-mails e notas fiscais; levantamento e leitura de dados; controle de contas a pagar, a receber.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Armador",
+          "desc": "Executa a montagem de armações de estruturas, prepara bancadas e suportes de trabalho, prepara o gabarito em bancada e suportes de trabalho, monta e instala máquinas de corte e dobra de ferros, recebe ferragens diversas e acondiciona em local da empresa separa para esse fim, mede ferragens para corte e dobra, efetua a dobra e/ou corte de ferragens conforme projeto em bancada com gabarito, executa a amarração de ferragens de bases, relaciona materiais para a armação de ferragens, verifica projetos de formas e estruturas, promove o levantamento, transporte e deposição de materiais, incluindo ferros, armações montadas, ferramentas e peças.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Assessor Pedagógico",
+          "desc": "Desenvolve atividades operacionais envolvendo assessoria no processo pedagógico envolvendo auxílio a professores e alunos; auxilia e colabora no processo pedagógico; colabora e orienta professores na preparação de programação, cronogramas, processos e planos de aulas; fornece suporte aos professores; organização dos registros de atividades da escola; fornecimento de feedbacks para melhoria contínua de todos os profissionais da instituição; acolhe demandas dos educadores; efetua suporte e acompanhamento das aulas; acompanha o aprendizado e ensino dos alunos; revisa o planejamento dos professores; organiza documentos, programas, planos e registros pedagógicos, tais como documentação das anotações dos professores, cadernos de chamadas, atas de reuniões; fornece orientação e revisão do planejamento de aula dos educadores; revisa e promove debates sobre o Projeto Político Pedagógico (PPP) da escola; participa de reuniões.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Assistente Administrativo",
+          "desc": "Desenvolve atividades administrativas envolvendo rotinas burocráticas, recebe e atende clientes, fornecedores e visitantes, presta suporte administrativo em atividades como preenchimento de planilhas e documentos, envio de e-mails, elaboração de relatórios e organização de arquivos, realiza a gestão de correspondências, recebendo e enviando correspondências e documentos em geral, controla a agenda de compromissos dos profissionais da construtora, agendando reuniões e compromissos, acompanha e controla processos administrativos, tais como pagamento de contas, emissão de notas fiscais, controle de estoque de materiais, entre outros, organiza e controla as informações sobre os funcionários da construtora, como registros de ponto, folhas de pagamento e benefícios, participa de reuniões e atividades de integração da equipe, realiza o atendimento telefônico, mantem-se atualizado sobre as políticas e procedimentos da construtora, garantindo o cumprimento das normas internas e externas.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Assistente de Compras",
+          "desc": "Auxiliar a execução de serviços administrativos relacionados a compras, utiliza telefone e microcomputador, preenche planilhas e controles de documentos, executa o arquivo de documentos da empresa e os funcionários.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Assistente de Departamento de Pessoal",
+          "desc": "Desenvolve atividades administrativas envolvendo rotinas de departamento de pessoal; auxilia na conferência e lançamento de informações; colabora no cálculo e na contabilização dos encargos sociais; presta suporte na administração e controle dos benefícios oferecidos aos funcionários; auxilia na manutenção e atualização dos registros e arquivos dos documentos; participa do processo de admissão de novos funcionários; contribui no preparo e envio de declarações e obrigações acessórias aos órgãos governamentais; auxilia no controle das férias e licenças dos colaboradores; presta suporte no cálculo e processamento das rescisões contratuais; auxilia na orientação dos funcionários; colabora na elaboração e implementação de políticas e procedimentos; participa da gestão dos programas de saúde e segurança no trabalho; mantém-se atualizado sobre as leis trabalhistas e previdenciárias vigentes; contribui na realização de auditorias internas e externas; auxilia em treinamentos e capacitações.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Assistente de Engenharia",
+          "desc": "Realiza atividades burocráticas em geral no escritório da obra envolvendo consulta a projetos, atendimento telefônico, envio e recebimento de e-mails, solicitação e recebimento de orçamentos, medições, pedidos, conferência de materiais, verificação da qualidade dos serviços, medições de obra, medições de empreiteiros, preenchimento de check lists, elaboração de relatórios, estatísticas, etc.; executa atividades burocráticas em geral na obra, como preenchimento de relatórios, check lists, verificações, análises, conferências, validações, etc.; efetua inspeções técnicas em subsolo, térreo, garagens, tipos, lazer, veículos, máquinas, equipamentos, ferramentas, materiais e substâncias químicas; acompanha concretagens.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Assistente de Escrita Fiscal",
+          "desc": "Desenvolve atividades administrativas envolvendo rotinas da área fiscal e contabilidade; realiza a conferência e a classificação de documentos fiscais; efetua o lançamento de informações fiscais no sistema contábil; verifica a adequação dos documentos fiscais às legislações e normas; auxilia no cálculo e na apuração de impostos; presta suporte na elaboração e entrega das obrigações acessórias; contribui na análise de benefícios fiscais e incentivos regionais; participa da conferência e conciliação de informações; auxilia na elaboração e envio das declarações fiscais; presta suporte na análise de legislações e atualizações tributárias; auxilia na identificação e solução de problemas relacionados à escrita fiscal; contribui no controle de certidões negativas e regularizações fiscais da empresa; colabora na organização e manutenção dos arquivos fiscais; auxilia no atendimento a fiscalizações e auditorias fiscais; colabora no controle e acompanhamento de regimes especiais de tributação; presta suporte na análise e conferência das notas fiscais de serviços.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Assistente de Sala",
+          "desc": "Desenvolve atividades operacionais envolvendo divulgação comercial de cursos da instituição; atende clientes; fornece informações a clientes sobre cursos da instituição; apresenta a escola a prospectivos clientes; dirime dúvidas de clientes; cadastra matrículas no sistema, para controle e faturamento; mantém contato com clientes, via e-mail ou telefone, oferecendo ou cotando os cursos da instituição visando o fechamento de matrículas; prospecta novos clientes visando a comercialização dos cursos da instituição; registra dados para cadastro; acompanha atendimento de pedidos dentro dos prazos negociados com o cliente; controla metas estabelecidas de vendas de cursos; procede à reativação de clientes inativos, mediante orientações do superior, atualizando o cadastro no sistema informatizado da empresa disponibilizando-o para novos pedidos; participa de reuniões.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Assistente de TI",
+          "desc": "Desenvolve atividades administrativas envolvendo rotinas de tecnologia da informação; presta suporte técnico aos usuários; realiza a instalação, configuração e manutenção de equipamentos de informática; auxilia na administração e manutenção dos sistemas operacionais; contribui na instalação e atualização de softwares e aplicativos; realiza backups e recuperação de dados; auxilia na configuração e manutenção de redes locais e conexões de internet; presta suporte na identificação e resolução de problemas de conectividade de rede; colabora no monitoramento e controle da segurança da informação; auxilia na gestão de contas de usuários, permissões de acesso e políticas de segurança; presta suporte na configuração e manutenção de servidores e sistemas de armazenamento de dados; auxilia na elaboração de procedimentos e documentação técnica relacionada aos sistemas e infraestrutura de TI; presta suporte na solução de problemas relacionados a perda de dados, falhas de equipamentos.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Assistente Financeiro",
+          "desc": "Desenvolve atividades administrativas envolvendo áreas de contabilidade, auditoria e finanças, recebimento e conferência de documentos processados sobre movimentação contábil e financeira, verificação de notas fiscais, apuração de faturamento, análise recolhimento de impostos, conferência de contas a pagar e a receber, apuração, análise, processamento e correção de dados, classificação de documentos, lançamentos contábeis, preparação de informações para apuração dos resultados periódicos da empresa, análise de retenção de impostos retidos, registro e controle de retenção do tributo, conciliação contábil dos pagamentos a fornecedores, atende à fiscalização ou auditores, fechamento contábil do período, apuração de impostos a recolher ou compensar, conciliação de pagamentos e recebimentos com extratos bancários, provisões de despesas de pessoal e folha de pagamento, valores de correção e depreciação do ativo fixo, fechamento contábil anual.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Assistente Fiscal ",
+          "desc": "Desenvolve atividades administrativas em geral envolvendo as áreas de contabilidade, auditoria e finanças; recebimento e conferência de documentos processados sobre movimentação contábil e financeira; verificação de notas fiscais; apuração de faturamento; análise recolhimento de impostos; conferência de contas a pagar e a receber; apuração, análise, processamento e correção de dados; classificação de documentos; lançamentos contábeis; preparação de informações para apuração dos resultados periódicos da empresa; análise de retenção de impostos retidos; registro e controle de retenção do tributo; conciliação contábil dos pagamentos a fornecedores; atende à fiscalização ou auditores; fechamento contábil do período; apuração de impostos a recolher ou compensar; conciliação de pagamentos e recebimentos com extratos bancários, provisões de despesas de pessoal e folha de pagamento, valores de correção e depreciação do ativo fixo; fechamento contábil anual.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Assistente Jurídico",
+          "desc": "Efetua a execução de serviços administrativos relacionados a jurídico, utiliza telefone e microcomputador, preenche planilhas e\ncontroles de documentos, executa o arquivo de documentos da empresa e os funcionários.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Assistente Técnico de Obras",
+          "desc": "Realiza atividades burocráticas em geral no escritório da obra envolvendo consulta a projetos, atendimento telefônico, envio e recebimento de e-mails, solicitação e recebimento de orçamentos, medições, pedidos, conferência de materiais, verificação da qualidade dos serviços, medições de obra, medições de empreiteiros, preenchimento de check lists, elaboração de relatórios, estatísticas, etc.; executa atividades burocráticas em geral na obra, como preenchimento de relatórios, check lists, verificações, análises, conferências, validações, etc.; efetua inspeções técnicas em subsolo, térreo, garagens, tipos, lazer, veículos, máquinas, equipamentos, ferramentas, materiais e substâncias químicas; acompanha concretagens.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Atendente",
+          "desc": "Desenvolve atividades operacionais envolvendo atendimento a clientes, colabora na organização e limpeza do ambiente de vendas, repõe produtos nas prateleiras, mantendo a exposição atrativa, atende os clientes com cordialidade, esclarecendo dúvidas e oferecendo assistência, opera o caixa, registrando corretamente as vendas e recebendo pagamentos, verifica a validade dos produtos, assegurando a qualidade dos itens à venda, auxilia na embalagem de produtos, seguindo padrões estabelecidos, colabora na verificação e controle de estoque, comunicando necessidades de reposição, executa atividades de apoio na produção de alimentos, quando necessário, participa de treinamentos e orientações para aprimorar suas habilidades, zela pela organização e higiene do espaço de atendimento, contribui para a manutenção de um ambiente agradável e acolhedor, auxilia na realização de inventários de produtos e mercadorias, realiza outras tarefas relacionadas à função conforme demanda e orientação da equipe.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Atendente de Prescrição",
+          "desc": "Desenvolve atividades de atendimento ao público para a venda de medicamentos e outros produtos de higiene pessoal e perfumaria, lê e/ou interpreta pedidos de medicamentos no receituário médico, busca produtos em sistema informatizado e em depósito, emite pedidos de compra após a escolha de clientes, registra entrada e saída de mercadorias, efetua troca de mercadorias, emite sugestões sobre produtos detalhando e demonstrando usos e aplicações, cuida de produtos nas prateleiras, displays ou pontos de venda, verifica a precificação dos produtos, controle estoque de produtos e seus níveis mínimos de reposição, verifica a correta fixação de cartazes e folhetos promocionais e disponibilidade dos recursos para as vendas, realiza inventário de mercadorias, prepara relatório de vendas, promoções, realiza demonstrações, promove pesquisa de preços.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Auxiliar Administrativo",
+          "desc": "Desenvolve atividades administrativas envolvendo rotinas burocráticas, recebe e atende clientes, fornecedores e visitantes, presta suporte administrativo em atividades como preenchimento de planilhas e documentos, envio de e-mails, elaboração de relatórios e organização de arquivos, realiza a gestão de correspondências, recebendo e enviando correspondências e documentos em geral, controla a agenda de compromissos dos profissionais da construtora, agendando reuniões e compromissos, acompanha e controla processos administrativos, tais como pagamento de contas, emissão de notas fiscais, controle de estoque de materiais, entre outros, organiza e controla as informações sobre os funcionários da construtora, como registros de ponto, folhas de pagamento e benefícios, participa de reuniões e atividades de integração da equipe, realiza o atendimento telefônico, mantem-se atualizado sobre as políticas e procedimentos da construtora, garantindo o cumprimento das normas internas e externas.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Auxiliar de Carpinteiro",
+          "desc": "Desenvolve atividades operacionais envolvendo montagem e desmontagem de fôrmas, caixarias, estruturas, bases, escoramentos, andaimes, plataformas, área de vivência, incluindo locais para engenharia, escritório, almoxarifado, refeitório, sanitários, vestiários, área de armação, serra circular, baias de resíduos, além de proteções diversas, incluindo escadas, rampas, passarelas, guarda corpos, bandejas, vedações, isolamentos, etc.; efetua demolições manuais, tais como quebra de paredes, pisos, madeiramento de telhado, telhas, etc.; realiza escavações, fundações, desmontes manuais de terra para a execução de blocos de ligação, cintas, vigas baldrames, blocos de fundações, etc.; executa marcações em geral envolvendo gabarito, estacas, alinhamento, prumo, gastalhos, etc.; executa e acompanha a execução de concretagens em blocos de fundações, pilares, lajes, vigas, etc.; promove o levantamento, transporte e deposição de materiais, incluindo ferramentas, peças, madeiras, entulho, etc.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Auxiliar de Conservação de Edifícios",
+          "desc": "Desenvolve atividades operacionais envolvendo executar serviços de limpeza, lavagem, higienização e conservação rotineira das áreas comuns do condomínio, transportar lixo doméstico para a coleta, utilizar produtos e utensílios de limpeza de uso doméstico.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Auxiliar de Conservação Predial",
+          "desc": "Desenvolve atividades operacionais envolvendo executar serviços de limpeza, lavagem, higienização e conservação rotineira das áreas comuns do condomínio, transportar lixo doméstico para a coleta, utilizar produtos e utensílios de limpeza de uso doméstico.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Auxiliar de Cozinha",
+          "desc": "Desenvolve atividades operacionais envolvendo auxílio ao cozinheiro na preparação de alimentos e bebidas; organiza área de trabalho, equipamentos e utensílios; organiza setor de despensa de alimentos; separa os alimentos para o cardápio do dia; lava, higieniza, arruma, corta e fatia verduras; lava, higieniza, arruma, corta e descasca legumes; fatia, corta ou moi carnes, etc.; lava, arruma, corta, fatia legumes em geral; lava louças, copos e utensílios em geral; higieniza área de trabalho, equipamentos e utensílios; abastece ou faz a reposição de alimentos para preparação. ",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Auxiliar de Enfermagem ",
+          "desc": "Desenvolve atividades operacionais envolvendo cuidados de saúde com pacientes; verifica disposição de equipamentos, utensílios, acessórios e materiais; confere e solicita reposição, quando necessário; auxilia no preparo e realização de exames de endoscopia, colonoscopia, manometria, gastroplastia, etc.; auxilia no preparo e execução da administração de medicamentos, via oral e injetáveis, nos pacientes, segundo ordem médica; inspeciona os pacientes, verificando sinais vitais, através da simples observação, do toque ou do uso de medidores de pressão arterial e termômetros; auxilia os pacientes em suas movimentações em maca, cadeira, etc.; higieniza equipamentos e materiais a serem utilizados aplicando material de limpeza específico; preenche relatórios e check lists.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Auxiliar de Escritório",
+          "desc": "Desenvolve atividades administrativas envolvendo auxílio e suporte em rotinas burocráticas, realiza atendimento telefônico, organiza documentos e arquivos, elabora relatórios e planilhas, executa atividades administrativas diversas, auxilia na elaboração de contratos e documentos legais, realiza o controle de entrada e saída de correspondências, efetua o cadastro de clientes e fornecedores, realiza o controle de estoque de materiais de escritório, presta suporte nas atividades financeiras, realiza o agendamento de reuniões e compromissos, participa de processos de seleção de pessoal, realiza o controle de ponto dos funcionários, auxilia na organização de eventos e treinamentos, presta suporte na gestão de contratos de prestação de serviços, efetua o controle de notas fiscais, realiza o acompanhamento de serviços terceirizados, organiza e mantém atualizado o arquivo de documentos, realiza o controle de contas a pagar e a receber, presta suporte nas demandas da equipe de limpeza.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Auxiliar de Faturamento",
+          "desc": "Desenvolve atividades administrativas envolvendo rotinas do faturamento; auxilia na conferência e registro de pedidos de venda; presta suporte na emissão de notas fiscais; contribui na verificação de impostos e alíquotas; auxilia na elaboração de faturas e boletos; colabora na conferência e reconciliação de dados; contribui na análise e conferência de condições de pagamento; auxilia no controle e organização de documentos e registros de faturamento; presta suporte na emissão de notas fiscais; contribui na apuração e registro de impostos e contribuições; auxilia na análise e tratamento de divergências ou problemas relacionados a faturas e cobranças; colabora na comunicação com clientes e setores internos; contribui na emissão de relatórios e indicadores de faturamento; auxilia na organização e arquivamento de documentos fiscais e comprovantes de pagamento; presta suporte na conferência de recebimentos e baixa de pagamentos; contribui na atualização e manutenção de cadastros.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Auxiliar de Manutenção",
+          "desc": "Desenvolve atividades operacionais envolvendo manutenção de equipamentos; organiza local, máquinas, equipamentos, ferramentas e materiais; recebe ordem de serviço, analisa e identifica problemas; inspeciona, avalia e verifica condições de equipamentos de desentupimento (bombas) e do caminhão auto bomba; estuda o trabalho de reparação a ser realizado; executa a manutenção dos equipamentos de desentupimento (bombas) e do caminhão auto bomba; auxilia em reparos mecânicos nos veículos da empresa; efetua troca de óleo lubrificante do cárter e óleo hidráulico; solicita peças e equipamentos; efetua testes em equipamentos e veículos e inspeção final pós execução.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Auxiliar de Manutenção Predial ",
+          "desc": "Desenvolve atividades operacionais envolvendo execução de pintura de superfícies internas e externas de edifícios e outras obras civis; executa pequenas regularizações em geral de reboco em paredes, lajes, tetos; prepara superfícies, raspando, limpando, emassando; prepara massa corrida e/ou tintas para aplicação; aplica massa corrida sobre superfícies, protegendo partes que não serão pintadas; executa o lixamento de superfícies com massa corrida; aplica demãos de tintas em superfícies.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Auxiliar de Produção",
+          "desc": "Desenvolve atividades operacionais envolvendo auxílio e suporte na confeitaria, na preparação de massas, recheios e coberturas, realiza a pesagem e medida dos ingredientes, garantindo a precisão nas receitas, auxilia no manuseio de equipamentos como batedeiras e fornos, executa tarefas de apoio, como o corte de frutas, separação de utensílios e organização do ambiente de trabalho, contribui na decoração de bolos, doces e outros produtos de confeitaria, monitora o tempo de preparo e cozimento, evitando desperdícios e garantindo a qualidade dos produtos, atende às orientações do confeiteiro responsável, seguindo as receitas e padrões estabelecidos, realiza a limpeza e higienização dos equipamentos e utensílios utilizados, verifica a validade e qualidade dos insumos antes de sua utilização, mantém a organização do estoque de ingredientes, facilitando o acesso e controle, apoia na criação de novas receitas e na elaboração de produtos diferenciados, participa de treinamentos.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Auxiliar de Serviços Gerais",
+          "desc": "Desenvolve atividades de limpeza e higienização de ambientes em geral; verifica e avalia estado geral dos locais de trabalho; recebe ordens de serviço; solicita autorização para limpeza de quartos; comunica problemas em quartos; retira produtos de limpeza e materiais; limpa, varre e higieniza áreas, andares, quartos e demais dependências; efetua registro de limpeza de ambientes; anota informações de controle em formulários; anota itens de consumo de hóspedes; solicita reposição de itens de consumo de hóspedes; recolhe e transporta resíduos domésticos; solicita reposição de produtos de limpeza.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Auxiliar de serviços gerais",
+          "desc": "Desenvolve atividades de limpeza e higienização de ambientes em geral, verifica e avalia estado geral dos locais de trabalho, recebe ordens de serviço, solicita autorização para limpeza de quartos, comunica problemas em quartos, retira produtos de limpeza e materiais, limpa, varre e higieniza áreas, andares, quartos e demais dependências, efetua registro de limpeza de ambientes, anota informações de controle em formulários, anota itens de consumo de hóspedes, solicita reposição de itens de consumo de hóspedes, recolhe e transporta resíduos domésticos, solicita reposição de produtos de limpeza.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Auxiliar de Topografia",
+          "desc": "Desenvolve atividades de auxílio de topografia; auxilia levantamentos de áreas demarcadas; auxilia na operação de teodolitos, trenas, níveis, e outros aparelhos de medição para determinar altitudes, distâncias, ângulos, coordenadas, referências de nível e outras características da superfície terrestre e de edifícios; auxilia no reconhecimento básico de áreas programadas; auxilia na análise das características de terrenos; auxilia na seleção de equipamentos adequados; auxilia na organização de arquivos.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Azulejista",
+          "desc": "Desenvolve atividades de aplicação de revestimentos em geral em pisos, paredes, muros e muretas em salas, cozinhas, banheiros, quartos e sacadas; realização de nível manual ou a laser; execução de contrapiso em pisos; realização de reboco em paredes; execução de regularizações em geral; aplicação de massa cola de revestimentos; aplicação de revestimentos de materiais, tamanhos e formas variados em salas, cozinhas, banheiros, quartos e sacadas; executa cortes, lixamento e ajustes em revestimentos para aplicação em quinas, sobre ralos, quadros, etc. preparação de massas em geral de revestimento; promove o levantamento, transporte e deposição de materiais, incluindo ferramentas, revestimentos, madeiras, sacos de massa de revestimento, entulho, etc.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Balconista",
+          "desc": "Desenvolve atividades operacionais envolvendo atendimento a clientes no balcão da padaria, atende os clientes de forma simpática e eficiente, fornece informações sobre os produtos de padaria, como pães, bolos e doces, repõe os itens nas prateleiras e expositores, garantindo a disponibilidade, verifica a frescura e a qualidade dos produtos, descartando os itens vencidos, embala os produtos de padaria de acordo com as solicitações dos clientes, auxilia os clientes na escolha de produtos e quantidades, opera equipamentos de padaria, como fornos e fatiadoras, mantém a área da padaria limpa e organizada, informa sobre promoções, descontos e ofertas especiais, auxilia na montagem de cestas e produtos personalizados, cumpre as normas de higiene e segurança alimentar, colabora na organização de eventos e promoções na padaria, realiza a gestão adequada dos resíduos gerados, atende a pedidos especiais dos clientes com eficiência, comunica problemas ou necessidades ao supervisor.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Barman",
+          "desc": "Desenvolve atividades operacionais envolvendo elaboração e preparação de bebidas em geral; recepciona os clientes no balcão de forma cortês e amigável; sugere opções de drinks e bebidas conforme as preferências dos clientes; prepara coquetéis, drinks e outras bebidas alcoólicas; utiliza técnicas adequadas de preparo e mistura de ingredientes; decora e finaliza as bebidas com estilo e criatividade; atende aos pedidos dos clientes com agilidade e precisão; verifica a qualidade dos produtos e insumos utilizados; mantém o balcão e as áreas de trabalho limpas e organizadas; repõe os estoques de bebidas, frutas e outros ingredientes; realiza o controle de estoque e inventário de bebidas; processa os pagamentos e registra as vendas no sistema; presta informações sobre as opções de bebidas e drinks disponíveis; zela pelo bom funcionamento do ambiente do bar; colabora com a equipe para garantir um atendimento eficiente e de qualidade; cumpre as diretrizes e políticas estabelecidas pela administração do restaurante",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Caixa",
+          "desc": "Desenvolve atividades operacionais envolvendo atendimento a clientes no caixa da lanchonete, registra com precisão os pedidos dos clientes, opera o sistema de caixa para processar os pagamentos, recebe o dinheiro, dá o troco e lida com transações com cartão, mantém o local de trabalho limpo e organizado, fornece informações sobre o cardápio e os preços aos clientes, auxilia na embalagem de pedidos para viagem, atende de forma cortês e eficiente, proporcionando uma boa experiência ao cliente, verifica a disponibilidade de itens no estoque, comunica ao gerente sobre questões relacionadas a pagamentos e trocos, colabora com a equipe para garantir um fluxo de atendimento suave, cumpre as políticas e procedimentos da lanchonete, trata reclamações dos clientes de maneira profissional, contribui para o balanço do caixa no final do turno, mantém a confidencialidade das informações financeiras, pode auxiliar no controle de estoque de produtos relacionados ao caixa, como embalagens e troco.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Caldeireiro",
+          "desc": "Desenvolve atividades operacionais envolvendo operação, fabricação e montagem de peças; recebe ordens de serviço; inspeciona máquinas, equipamentos e ferramentas; avalia serviço a ser executado, materiais e insumos necessários; executa serviços usinagem; limpa, corta, dobra e solda peças metálicas; confecciona, repara e instala peças e elementos diversos em chapas de metal, tais como aço, ferro galvanizado, cobre, estanho, latão, alumínio e zinco; fabrica e repara caldeiras, tanques, reservatórios e outros recipientes de chapas de aço; limpa dependências do estabelecimento e setor de trabalho; organiza máquinas, equipamentos, ferramentas, materiais e insumos; efetua levantamento e transporte de peças, materiais e outros; limpa e conserva equipamentos e ferramentas utilizadas.\n",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Carpinteiro",
+          "desc": "Desenvolve atividades operacionais envolvendo montagem e desmontagem de fôrmas, caixarias, estruturas, bases, escoramentos, andaimes, plataformas, área de vivência, incluindo locais para engenharia, escritório, almoxarifado, refeitório, sanitários, vestiários, área de armação, serra circular, baias de resíduos, além de proteções diversas, incluindo escadas, rampas, passarelas, guarda corpos, bandejas, vedações, isolamentos, etc., efetua demolições manuais, tais como quebra de paredes, pisos, madeiramento de telhado, telhas, etc., realiza escavações, fundações, desmontes manuais de terra para a execução de blocos de ligação, cintas, vigas baldrames, blocos de fundações, etc., executa marcações em geral envolvendo gabarito, estacas, alinhamento, prumo, gastalhos, etc., executa e acompanha a execução de concretagens em blocos de fundações, pilares, lajes, vigas, etc., promove o levantamento, transporte e deposição de materiais, incluindo ferramentas, peças, madeiras, entulho, etc.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Chapeiro",
+          "desc": "Desenvolve atividades operacionais envolvendo atendimento a clientes; recebe e atende pedidos de clientes; separa e prepara itens de pedidos; lava, corta, fatia e organiza para preparo; limpar e recolhe resíduos da chapa; prepara lanches quentes e frios; grelha, frita carnes, ovos, queijos; tempera e monta lanches, sanduiches, pratos rápidos; requisita itens e produtos de consumo; anotarem comandas eletrônicas; embala, identifica, acomoda, repõem, acondiciona e organiza mercadorias nos estoques, displays, gôndolas, prateleiras e refrigeradores; higieniza áreas, superfícies e utensílios; recolhe produtos fora de padrão.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Chapista",
+          "desc": "Desenvolve atividades operacionais envolvendo atendimento a clientes; receber e atender pedidos de clientes; separar e preparar itens de pedidos; lavar, cortar, fatiar e organizar para preparo; limpar e recolher resíduos da chapa; preparar lanches quentes e frios; grelhar, fritar carnes, ovos, queijos; temperar e montar lanches, sanduiches, pratos rápidos; requisitar itens e produtos de consumo; anotar em comandas eletrônicas; embalar, identificar, acomodar, repor, acondicionar e organizar mercadorias nos estoques, displays, gôndolas, prateleiras e refrigeradores; higienizar áreas, superfícies e utensílios; recolher produtos fora de padrão.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Chapista",
+          "desc": "Desenvolve atividades de atendimento a clientes; receber e atender pedidos de clientes; separar e preparar itens de pedidos; lavar, cortar, fatiar e organizar para preparo; limpar e recolher resíduos da chapa; preparar lanches quentes e frios; grelhar, fritar carnes, ovos, queijos; temperar e montar lanches, sanduiches, pratos rápidos; requisitar itens e produtos de consumo; anotar em comandas eletrônicas; embalar, identificar, acomodar, repor, acondicionar e organizar mercadorias nos estoques, displays, gôndolas, prateleiras e refrigeradores; higienizar áreas, superfícies e utensílios; recolher produtos fora de padrão",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Churrasqueiro",
+          "desc": "Desenvolve atividades operacionais envolvendo preparação de alimentos na churrasqueira; prepara a churrasqueira acendendo o fogo e ajustando a temperatura; seleciona e prepara os cortes de carne de acordo com as preferências dos clientes; tempera as carnes com os temperos adequados; posiciona as carnes na grelha de forma estratégica; vira e vira as carnes durante o processo de cozimento; monitora o tempo de cozimento e ajusta conforme necessário; realiza o corte e a montagem das carnes para servir; prepara e acompanha os molhos e acompanhamentos do churrasco; mantém a churrasqueira limpa e higienizada durante o expediente; colabora na organização e reposição de estoque de ingredientes; trabalha em equipe com os demais profissionais da cozinha; cumpre as normas de higiene e segurança alimentar; zela pela qualidade das carnes e do churrasco preparado; cumpre as diretrizes e políticas estabelecidas pela administração do restaurante.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Confeiteiro",
+          "desc": "Desenvolve atividades operacionais envolvendo o preparo de massas recheios e bolos na confeitaria, realiza a pesagem, mistura e preparo dos ingredientes necessários para a produção dos produtos, ajusta e opera equipamentos específicos de confeitaria, garantindo o bom funcionamento, executa técnicas de decoração em bolos e doces, utilizando diferentes utensílios, cria e desenvolve novas receitas e sabores de acordo com a proposta da padaria, monitora o tempo de preparo e assamento dos produtos, garantindo a qualidade final, realiza o controle de estoque dos insumos necessários para a confeitaria, assegura o cumprimento das normas de higiene e segurança alimentar durante todo o processo, zela pela limpeza e organização do ambiente de trabalho, incluindo utensílios e equipamentos, atende aos pedidos personalizados dos clientes, quando necessário, embala e etiqueta os produtos para exposição e venda, realiza a manutenção e limpeza dos equipamentos utilizados na produção.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Conferente",
+          "desc": "Desenvolve atividades operacionais envolvendo recebimento, conferência e organização de produtos diversos; recebe produtos; verifica notas fiscais e especificações de produtos; separa lotes para conferência; separa tipos de produtos para verificação; analisa dados específicos de produtos; providencia o transporte dos produtos para os locais adequados de armazenamento; verifica e confere produtos para devolução; providencia a devolução de produtos;  confere carregamento e descarregamento de produtos; orienta a movimentação de cargas; auxiliar no inventário físico dos produtos estocados; cuida da ordem e limpeza do local de estocagem, equipamentos e ferramentas de trabalho; participa do inventário do estoque; orienta a reposição de mercadorias; promove a limpeza das áreas.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Coordenador Administrativo",
+          "desc": "Desenvolve atividades operacionais envolvendo as áreas de departamento de pessoal, recursos humanos, contabilidade, auditoria e finanças; distribui, orienta e supervisiona o controle de contas a pagar e a receber; acompanhamento de vencimentos, pagamento e baixa dos títulos; distribui, orienta e supervisiona a emissão do faturamento; supervisiona o atendimento telefônico; coordena o processo de compras de materiais; analisa as autorizações para as despesas, cota preços e condições de fornecimento; acompanha a contabilização; responsabiliza-se pela administração de registro e controle do ponto, admissões, férias e demissões, identificação e organização de treinamentos, processos de remuneração, emissão da folha de pagamento e encargos; prepara o fechamento financeiro do período; elabora orçamento anual da empresa; apura e analisa indicadores econômicos financeiros; participa de reuniões; desenvolve normas e procedimentos administrativos.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Coordenador de Obras",
+          "desc": "Gerencia obras na interface entre construtora e incorporadora; organiza e supervisiona o canteiro de obras; efetua inspeções em geral; aponta e propõe ações de correção; reporta prazos, atrasos, produção, qualidade dos serviços; acompanha e fiscaliza obras; presta suporte no acompanhamento de custos; realiza o planejamento da concepção de produtos.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Coordenador Pedagógico",
+          "desc": "Desenvolve atividades operacionais envolvendo gestão do processo pedagógico envolvendo auxílio a professores e alunos; auxilia e colabora no processo pedagógico; colabora e orienta professores na preparação de programação, cronogramas, processos e planos de aulas; fornece suporte aos professores; organização dos registros de atividades da escola; fornecimento de feedbacks para melhoria contínua de todos os profissionais da instituição; acolhimento para as demandas dos educadores; suporte e acompanhamento das aulas; acompanhamento do aprendizado e ensino dos alunos; revisar o planejamento dos professores; organização de documentos, programas, planos e registros pedagógicos, tais como documentação das anotações dos professores, cadernos de chamadas, atas de reuniões; fornecimento de orientação e revisão do planejamento de aula dos educadores; revisão e promoção de debates sobre o Projeto Político Pedagógico (PPP) da escola; participação de reuniões.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Copeiro",
+          "desc": "Desenvolve atividades operacionais envolvendo elaboração e preparação de bebidas, lanches, e arrumação geral de balcão, repõe os insumos necessários para o atendimento aos clientes, prepara e serve bebidas, lanches e alimentos conforme padrões estabelecidos, realiza o controle do estoque de produtos perecíveis e não perecíveis, mantém a organização e a disposição adequada dos utensílios e equipamentos, recolhe os utensílios utilizados, lavando e higienizando de acordo com as normas, auxilia na montagem de mesas e na disposição de produtos nas vitrines, atende às demandas dos clientes, oferecendo um serviço ágil e cordial, verifica as condições de funcionamento de máquinas e equipamentos utilizados, colabora na manutenção da ordem e da limpeza da cozinha e do salão, apoia em tarefas diversas conforme a necessidade da padaria, cumpre as normas de segurança alimentar e higiene pessoal, interage com a equipe de forma colaborativa e proativa, executa outras atividades correlatas ao cargo.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Cordeiro",
+          "desc": "Desenvolve atividades de execução, manutenção, reparo e limpeza de paredes, vigas, pisos, tetos, esquadrias, peles de vidro, etc., em áreas de acesso somente vertical, com auxílio de corda; preparação de massas, tintas, substâncias e produtos de limpeza em geral de forma manual; realização de pequenas demolições manuais, tais como quebra de paredes, pisos, etc.; execução de pequenos serviços de requadrações beirais, vigas, pilares, etc., em fachadas e sacadas de edifícios; execução de pequenos serviços de regularizações e assentamentos em geral, revestimentos sobre estrutura, paredes, pisos e forros, internos e/ou externos, tais como emboço, reboco, massa corrida, pintura, cerâmicos e pedras diversos em fachadas de edifícios; execução de finalizações em geral envolvendo massa corrida, rejunte, revestimentos, etc.; execução de conservação e limpeza de paredes, vigas, pisos, tetos, esquadrias, peles de vidro, etc.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Cortador",
+          "desc": "Desenvolve atividades operacionais envolvendo atuação na produção de peças; recebe ordens de serviço; inspeciona máquinas, equipamentos, ferramentas, acessórios e materiais; confere parâmetros de máquinas; opera a mesa de corte de vidros; executa serviços manuais; auxilia no transporte manual de pequenas peças de vidro; realiza limpezas nos locais de trabalho.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Cozinheiro",
+          "desc": "Desenvolve atividades operacionais envolvendo preparação de alimentos e bebidas na cozinha, prepara os ingredientes de acordo com as receitas, cozinha os alimentos usando técnicas apropriadas, monitora o cozimento para garantir o ponto desejado, experimenta e ajusta os temperos conforme necessário, segue as diretrizes e padrões de qualidade estabelecidos, coordena com a equipe de cozinha para sincronizar os pedidos, trabalha em diferentes estações da cozinha, conforme designado, mantém a área de trabalho limpa e organizada, assegura a conformidade com as normas de higiene e segurança alimentar, verifica a qualidade dos ingredientes antes de usá-los, respeita os tempos de preparo e montagem dos pratos, colabora com outros membros da equipe, utiliza utensílios e equipamentos de cozinha adequadamente, cumpre os procedimentos de armazenamento de alimentos, adapta-se a situações de alta demanda com eficiência, executa tarefas de pré-preparo, como cortar e marinar.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Dedetizador",
+          "desc": "Desenvolve atividades operacionais envolvendo dedetização de clientes; executa a limpeza interna de reservatórios enterrados e elevados em edifícios comerciais e residenciais, que compreende a retirada manual de lama e sujeiras e aplicação de manual de solução com hipoclorito de sódio; executa a dedetização de edifícios residenciais e comerciais, que compreende a aplicação de inseticidas com bombas costais ou equipamento pulsfog; transporta manualmente os materiais a serem utilizados, eventual",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Divulgador",
+          "desc": "Desenvolve atividades operacionais envolvendo divulgação comercial de cursos da instituição; atende clientes; fornece informações a clientes sobre cursos da instituição; apresenta a escola a prospectivos clientes; dirime dúvidas de clientes; cadastra matrículas no sistema, para controle e faturamento; mantém contato com clientes, via e-mail ou telefone, oferecendo ou cotando os cursos da instituição visando o fechamento de matrículas; prospecta novos clientes visando a comercialização dos cursos da instituição; registra dados para cadastro; acompanha atendimento de pedidos dentro dos prazos negociados com o cliente; controla metas estabelecidas de vendas de cursos; procede à reativação de clientes inativos, mediante orientações do superior, atualizando o cadastro no sistema informatizado da empresa disponibilizando-o para novos pedidos; participa de reuniões.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Eletricista",
+          "desc": "Desenvolve atividades operacionais envolvendo montagem e desmontagem de fôrmas, caixarias, estruturas, bases, escoramentos, andaimes, plataformas, área de vivência, incluindo locais para engenharia, escritório, almoxarifado, refeitório, sanitários, vestiários, área de armação, serra circular, baias de resíduos, além de proteções diversas, incluindo escadas, rampas, passarelas, guarda corpos, bandejas, vedações, isolamentos, etc., efetua demolições manuais, tais como quebra de paredes, pisos, madeiramento de telhado, telhas, etc., realiza escavações, fundações, desmontes manuais de terra para a execução de blocos de ligação, cintas, vigas baldrames, blocos de fundações, etc., executa marcações em geral envolvendo gabarito, estacas, alinhamento, prumo, gastalhos, etc., executa e acompanha a execução de concretagens em blocos de fundações, pilares, lajes, vigas, etc., promove o levantamento, transporte e deposição de materiais, incluindo ferramentas, peças, madeiras, entulho, etc.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Encanador",
+          "desc": "Desenvolve atividades operacionais envolvendo montagem, desmontagem e testes de instalações hidrosanitárias provisórias e permanentes de obra, tais como tubulações de esgoto, água fria, água quente, sistemas de gás encanado, sistemas de drenagem, sistemas de combate a incêndio, louças e metais sanitários, moto bombas, estação redutora de pressão, efetua pequenas demolições manuais, tais como quebra de paredes, pisos, etc., realiza pequenas escavações, desmontes manuais de terra, relacionados à ligações de água e esgoto, instalação de tubulações, registros, etc., executa a marcação, em lajes a serem concretadas, da posição de tubulações de esgoto, água fria, água quente, sistemas de gás encanado, sistemas de combate a incêndio, etc., acompanha concretagens, promove o levantamento, transporte e deposição de materiais, tais como ferramentas, tubulações, louças e metais sanitários, acessórios e materiais diversos, etc.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Encarregado",
+          "desc": "Desenvolve atividades operacionais envolvendo coordenação das atividades gerais do estabelecimento; coordena e supervisiona as equipes de trabalho; distribui as tarefas entre os colaboradores; acompanha o cumprimento dos procedimentos e padrões de qualidade; orienta e treina os funcionários em relação às técnicas de produção e atendimento; monitora o estoque de ingredientes e materiais, realizando pedidos quando necessário; verifica a qualidade dos produtos e a apresentação das vitrines e balcões; zela pelo cumprimento das normas de higiene e segurança alimentar; realiza a gestão do fluxo de trabalho, garantindo o bom funcionamento da padaria; lida com eventuais problemas ou reclamações dos clientes; realiza a abertura e fechamento do estabelecimento; registra e controla as vendas e o caixa; colabora na elaboração de relatórios e indicadores de desempenho; e contribui para o crescimento e sucesso do negócio.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Encarregado",
+          "desc": "Desenvolve atividades operacionais envolvendo supervisão de profissionais de civil da obra; execução de nível manual ou a laser e marcações; execução de alvenaria de tijolos, blocos de concreto, elementos vazados, etc.; execução de revestimentos sobre estrutura, paredes, pisos e forros, internos e/ou externos; instalação de contra marcos, portas, esquadrias e guarda corpos; carregamento e descarregamento manual ou mecanizado de materiais diversos; transporte e descarte de entulhos em geral; organização de áreas externas, internas, do canteiro de obras; realização de demolições manuais, tais como quebra de paredes, pisos, etc.; acompanhamento de concretagens; limpeza e lavagem de ambientes do canteiro de obras, bem como limpeza e varrição; acompanhamento de preparação de massas em geral; análise de plantas, tabelas, relatórios, catálogos, etc.; realização de check list final; acompanhamento de limpezas finas e grossas de obras; realização de reuniões.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Encarregado Administrativo de Obras",
+          "desc": "Realiza atividades burocráticas em geral no escritório da obra envolvendo atendimento telefônico, envio e recebimento de e-mails, solicitações de pedidos, conferência de materiais, controle de estoques, preenchimento de check lists, administração de pessoal na obra, incluindo controle de ponto, banco de horas, e outros controles de pessoal via sistema interno da empresa, elaboração de relatórios, estatísticas, etc.; executa atividades burocráticas em geral na obra, como preenchimento de relatórios, check lists, verificações, análises, conferências, validações, etc.; efetua inspeções técnicas em obra, veículos, máquinas, equipamentos, ferramentas, materiais e produtos diversos; acompanha concretagens; promove levantamento, transporte e deposição de materiais envolvendo materiais diversos de escritório, etc.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Encarregado de Açougue",
+          "desc": "Desenvolve atividades operacionais envolvendo supervisão de açougue; recebe peças brutas; confere especificações dos produtos recebidos; avalia a qualidade de produtos recebidos; armazena produtos em câmaras frigoríficas; busca peças em câmaras frigoríficas e desossa, conforme tipo e corte; acondiciona peças e produtos em ganchos para trabalho e exposição a clientes; retorna produtos para câmaras frigoríficas; atende pedidos de clientes; orienta sobre os tipos de produtos; retira produtos solicitados das câmaras frigoríficas; disponibiliza produtos em mesas, plataformas e suportes; acolhe o pedido, corta, moi ou fatia o produto; pesa, imprime a etiqueta precificada e embala produtos; limpa e higieniza o local, superfícies e utensílios utilizados; preparar cortes especiais de acordo com demanda, receitas ou orientações; requisita componentes, manipula, precifica, embala e disponibiliza para venda; promove o levantamento e transporte de materiais e cargas gerais de trabalho.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Encarregado de Armação",
+          "desc": "Supervisiona as atividades de Armadores e Ajudantes, bem como de empresas contratadas, na execução de montagem de armações de estruturas em concreto armado em geral, tais como bases, blocos, lajes, pilares, vigas, etc.; preparação de bancadas e suportes de trabalho; preparação do gabarito em bancada e suportes de trabalho; montagem e instalação de máquinas de corte e dobra de ferros; recebimento de ferragens diversas e acondiciona em local da obra separa para esse fim; medição de ferragens para corte e dobra; execução de dobra e/ou corte de ferragens conforme projeto em bancada com gabarito; execução de amarração de ferragens de bases, blocos, lajes, pilares, vigas, etc.; verifica projetos de formas e estrutura; relaciona materiais para a armação de ferragens; verifica projetos de formas e estrutura.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Encarregado de Carpintaria",
+          "desc": "Supervisiona as atividades de Carpinteiros e Serventes (Carpintaria), envolvendo execução de montagem e desmontagem de fôrmas, caixarias, estruturas, bases, escoramentos, andaimes, plataformas, área de vivência, locais para engenharia, escritório, almoxarifado, refeitório, sanitários, vestiários, área de armação, serra circular, baias de resíduos, além de proteções diversas, escadas, rampas, passarelas, guarda corpos, bandejas, vedações, isolamentos, etc.; execução de demolições manuais, tais como quebra de paredes, pisos, madeiramento de telhado, telhas, etc.; realização de escavações, fundações, desmontes manuais de terra para a execução de cintas, vigas baldrames, blocos de fundações, etc.; execução de marcações em geral envolvendo gabarito, estacas, alinhamento, prumo, gastalhos, etc.; acompanhamento da execução de concretagens em blocos de fundações, pilares, lajes, vigas, cintas, etc.; análise de plantas, tabelas, relatórios, catálogos, etc.; participa de reuniões.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Encarregado de Elétrica",
+          "desc": "Supervisiona as atividades de Eletricistas e Serventes (Elétrica), na execução de montagem, desmontagem e testes de instalações elétricas provisórias e permanentes de obra (robôs, tomadas, interruptores, painéis, quadros e fiações elétricas, padrões de entrada, gerador, medidores, aterramento); execução de demolições manuais tais como quebra de paredes, pisos, excessos de concreto, etc.; realização de escavações, desmontes manuais de terra, aterramento; execução de marcações em geral envolvendo fiações elétricas, conduítes, caixas de passagem, mangueiras, quadros elétricos, aterramento, alarme, internet, telefonia; acompanhamento de concretagens; análise de plantas, tabelas, relatórios, catálogos, etc.; participa de reuniões.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Encarregado de Fachada",
+          "desc": "Desenvolve atividades operacionais envolvendo supervisão de Pedreiros Fachadeiros e Serventes (Civil), sobre fachadas, beirais, sacadas e faces externas de construções, com o apoio de andaimes, balancins e plataformas, execução de nível manual ou a laser e marcações em lajes, pilares e vigas, execução de alvenaria de tijolos, blocos de concreto, elementos vazados, em fachadas de edifícios, execução de regularizações em geral, revestimentos sobre estrutura, paredes, pisos e forros, internos e/ou externos, tais como emboço, reboco, massa corrida, pintura, cerâmicos e pedras diversos em fachadas de edifícios, execução de requadrações em geral em beirais, vigas, pilares, etc., em fachadas e sacadas de edifícios, realização de pequenas demolições manuais, tais como quebra de paredes, pisos, etc., preparação de massas em geral de forma manual ou com auxílio de masseira/misturador, análise de plantas, tabelas, relatórios, catálogos, etc.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Encarregado de Manutenção",
+          "desc": "Desenvolve atividades operacionais envolvendo executar serviços de manutenção e conservação rotineira das áreas comuns, utilizar produtos e utensílios adequados.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Encarregado de Motorista",
+          "desc": "Desenvolve atividades de transportes envolvendo coordenar as atividades das equipes de motoristas; controla as atividades gerais desenvolvidas; emite ordens e orientações aos demais empregados; efetua contatos diversos com representantes da contratante / diretoria da empresa; executa serviços administrativos diversos; auxilia na limpeza de fossas, caixas de gordura, estações elevatórias de esgoto e banheiros químicos, que compreende a retirada de detritos com auxílio de mangueiras e bomba de vácuo instalado no caminhão; opera a bomba de vácuo do caminhão; opera os comandos do equipamento de hidrojateamento; auxilia no transporte manual dos materiais a serem utilizados; opera a máquina elétrica desentupidora de cabo espiral.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Encarregado de Obra",
+          "desc": "Desenvolve atividades operacionais envolvendo supervisão de profissionais de civil da obra, execução de nível manual ou a laser e marcações, execução de alvenaria de tijolos, blocos de concreto, elementos vazados, etc., execução de revestimentos sobre estrutura, paredes, pisos e forros, internos e/ou externos, instalação de contra marcos, portas, esquadrias e guarda corpos, carregamento e descarregamento manual ou mecanizado de materiais diversos, transporte e descarte de entulhos em geral, organização de áreas externas, internas, do canteiro de obras, demolições manuais, tais como quebra de paredes, pisos, etc., acompanhamento de concretagens, limpeza e lavagem de ambientes do canteiro de obras, bem como limpeza e varrição da obra e de equipamentos e ferramentas em geral, acompanhamento de preparação de massas em geral, análise de plantas, tabelas, relatórios, catálogos, etc., check list final, acompanhamento de limpezas finas e grossas de obras, realização de reuniões.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Encarregado de Padaria",
+          "desc": "Desenvolve atividades operacionais envolvendo supervisão de padaria; receber informação de produção com as necessidades de fabricação (pão francês, baguetes, brioches, pão de forma, bisnagas, etc.); requisitar do estoque e retirar quantidade de matéria-prima necessária (farinha, fermento, componentes químicos, etc.); preparar equipamentos, com limpeza e remoção de resíduos, regular controles de tempo do processo, velocidade de misturadores, espessura de laminação, etc.; pesar, medir, adicionar componentes e acionar equipamentos; elaborar massas, misturar,  bater, cilindrar, moldar e colocar para assar; acompanhar a homogeneização dos produtos; colocar e retirar produtos em fornos; limpar e lavar o ambiente, mesas, balcões, superfícies, pias, equipamentos e utensílios utilizados; coletar amostras; encaminhar produtos prontos para comercialização; pesquisar e desenvolver novas receitas de produtos e simulares em função da demanda de clientes ou diversidade dos produtos.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Encarregado de Pavimentação",
+          "desc": "Supervisiona as atividades de profissionais de terraplenagem e pavimentação; supervisão de atividades de topografia; supervisão de atividades de terraplenagem na movimentação de terras e materiais; supervisão na execução de atividades de pavimentação; realização de check list final; acompanhamento de limpezas finas e grossas de obras; realização de reuniões.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Encarregado de Reposição",
+          "desc": "Desenvolve atividades operacionais envolvendo supervisão de reposição de produtos e mercadorias no estabelecimento; percorre todas as áreas de mercadorias do estabelecimento; verifica a necessidade de reposição de produtos e mercadorias; avalia o estado de produtos e mercadorias; verifica as condições de etiquetas de precificação e tarjas para a adequada visualização em produtos e mercadorias; retira produtos e mercadorias que não estejam adequados e segundo padrões; organiza produtos e mercadorias; relaciona produtos e mercadorias a serem repostos; abre embalagens de produtos e mercadorias e dispõe os mesmos nos locais adequados; efetua a reposição de produtos e mercadorias em gôndolas, prateleteiras, displays, etc.; efetua o levantamento e transporte de produtos e mercadorias; remove restos de embalagens e detritos para descarte.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Encarregado Produção",
+          "desc": "Supervisiona as atividades de  profissionais de civil da obra; execução de nível manual ou a laser e marcações; execução de alvenaria de tijolos, blocos de concreto, elementos vazados, etc.; execução de revestimentos sobre estrutura, paredes, pisos e forros, internos e/ou externos; instalação de contra marcos, portas, esquadrias e guarda corpos; carregamento e descarregamento manual ou mecanizado de materiais diversos; transporte e descarte de entulhos em geral; organização de áreas externas, internas, do canteiro de obras; realização de demolições manuais, tais como quebra de paredes, pisos, etc.; acompanhamento de concretagens; execução de limpeza e lavagem de ambientes do canteiro de obras, bem como limpeza e varrição da obra e de equipamentos e ferramentas em geral; acompanhamento de preparação de massas em geral; análise de plantas, tabelas, relatórios, catálogos, etc.; realização de check list final; acompanhamento de limpezas finas e grossas de obras; realização de reuniões.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Engenheiro Civil",
+          "desc": "Desenvolve atividades operacionais envolvendo apoio e suporte na engenharia de obras, auxilia na elaboração de projetos, colabora na análise de plantas e documentos técnicos relacionados às obras em andamento, apoia na realização de levantamentos e medições no canteiro de obras, contribui na elaboração de relatórios técnicos e memórias descritivas de projetos, participa de reuniões técnicas com a equipe de engenharia e arquitetura, acompanha e registra o progresso das atividades de construção no canteiro de obras, auxilia na supervisão e controle do cronograma de obras, participa de reuniões de equipe no canteiro de obras, ajuda na medição e controle de qualidade dos materiais utilizados na construção, colabora na resolução de problemas técnicos que surgem durante a execução da obra, auxilia na elaboração de relatórios de acompanhamento e controle de obras, apoia na coordenação e acompanhamento das equipes de trabalho.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Estoquista",
+          "desc": "Desenvolve atividades operacionais envolvendo controle de estoque e expedição; recepciona, confere, verifica documentações e armazena produtos e materiais; estoca produtos conforme especificação; realiza lançamentos de movimentação de entradas e saídas e controle geral de estoques em sistema específico; distribui produtos e materiais a serem expedidos; organiza deposito para facilitar a movimentação dos itens armazenados e a armazenar; empacota ou desempacota produtos; realiza expedição de materiais e produtos examinando-os, providenciando os despachos dos mesmos; auxilia no processo de logística; participa do inventário do estoque confrontando a posição física dos produtos com as quantidades planilhadas, para efeitos de controle e posterior contabilização.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Farmacêutico",
+          "desc": "Desenvolve atividades de atendimento ao público para a venda de medicamentos, atende o público em geral para a dispensação de medicamentos a pacientes, lê e interpreta receituários médicos, busca produtos, orienta clientes quanto ao seu uso e aplicação, processa vendas, atende ou orienta na venda de produtos de higiene pessoal, perfumaria e cosméticos, alimentos especiais, etc., efetua pequenos curativos, aplica injetáveis, mede pressão arterial, presta serviços de inalação, avalia a prescrição médica, prepara o equipamento e/ou utensílios necessários e executa a operação, verifica a precificação dos produtos, controle estoque de produtos e seus níveis mínimos de reposição, verifica a correta fixação de cartazes e folhetos promocionais e disponibilidade dos recursos para as vendas, realiza inventário de mercadorias, prepara relatório de vendas, promoções, realiza demonstrações, promove pesquisa de preços, abertura e fechamento diário de caixa, atende fornecedores.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Faxineiro ",
+          "desc": "Desenvolve atividades operacionais envolvendo executar serviços de limpeza e lavagem rotineira das áreas comuns, transportar lixo doméstico para a coleta, utilizar produtos e utensílios de limpeza de uso doméstico.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Fiscal de Caixa",
+          "desc": "Desenvolve atividades operacionais envolvendo fiscalização de caixas; abastece caixa com numerário de fundo de reserva; envia numerário para cofre; entrega comandas para uso; opera microcomputador; recebe, confere, registra e efetua recebimentos de valores de comandas; abre, confere e entrega troco em dinheiro de valores da caixa registradora; recebe, digita, confere e valida valores de cartões de crédito, débito, refeição, alimentação; entrega notas e cupons fiscais; efetua abastecimento de itens de caixa; fornece informações a clientes, vendedores e fornecedores; efetua controles de entrada se saídas; atende telefonemas; coordena o fechamento do caixa.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Garçom",
+          "desc": "Desenvolve atividades operacionais envolvendo recepção e atendimento a clientes, recebe os clientes de forma cortês e atenciosa, acompanha os clientes até as mesas e apresenta o cardápio, anota os pedidos dos clientes, recomenda pratos e sugere opções de bebidas, entrega os pedidos na cozinha e acompanha o tempo de preparo, serve os pratos e bebidas, retira os pratos e utensílios utilizados após a refeição, verifica se os clientes estão satisfeitos, atende aos pedidos adicionais dos clientes durante a refeição, realiza a troca de pratos e talheres, presta informações sobre os pratos, ingredientes e preparo, emite as contas e recebe os pagamentos dos clientes, processa os pagamentos em dinheiro, cartões de crédito e débito, colabora na limpeza e organização das mesas e salão, colabora na reposição de estoque de utensílios e insumos, cumpre as normas de higiene e segurança alimentar, trabalha em equipe com os demais funcionários do restaurante.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Garçonete",
+          "desc": "Desenvolve atividades operacionais envolvendo recepção e atendimento a clientes, recebe os clientes de forma cortês e atenciosa, acompanha os clientes até as mesas e apresenta o cardápio, anota os pedidos dos clientes, recomenda pratos e sugere opções de bebidas, entrega os pedidos na cozinha e acompanha o tempo de preparo, serve os pratos e bebidas, retira os pratos e utensílios utilizados após a refeição, verifica se os clientes estão satisfeitos, atende aos pedidos adicionais dos clientes durante a refeição, realiza a troca de pratos e talheres, presta informações sobre os pratos, ingredientes e preparo, emite contas e recebe os pagamentos, processa os pagamentos em dinheiro, cartões de crédito e débito, colabora na limpeza e organização das mesas e salão, colabora na reposição de estoque de utensílios e insumos, cumpre as normas de higiene e segurança alimentar, auxilia na realização de inventário de mercadorias, trabalha em equipe com os demais funcionários da lanchonete.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Gerente",
+          "desc": "Desenvolve atividades administrativas envolvendo gerenciamento do estabelecimento, supervisiona a equipe, distribuindo tarefas e orientando os colaboradores, realiza a gestão de estoque, controlando a entrada e saída de produtos, monitora a qualidade dos produtos oferecidos, assegurando os padrões estabelecidos pela padaria, atende fornecedores e realiza negociações para aquisição de insumos, elabora escalas de trabalho, considerando a demanda e necessidades da equipe, avalia o desempenho dos colaboradores, promovendo feedbacks e estimulando o desenvolvimento profissional, implementa estratégias de vendas e promoções para impulsionar o faturamento, zela pelo cumprimento das normas de higiene e segurança alimentar, gerencia as finanças, elaborando relatórios e controlando orçamentos, interage com os clientes, buscando feedbacks e promovendo a satisfação, resolve eventuais problemas operacionais e conflitos internos, mantém contato com órgãos reguladores e fiscalizadores.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Gerente Comercial",
+          "desc": "Desenvolve atividades administrativas envolvendo o gerenciamento do comercial, prospecta novos clientes por meio de visitas e contatos telefônicos, identificando oportunidades de negócio, realiza o acompanhamento de leads, garantindo o fluxo contínuo de possíveis contratos, elabora propostas comerciais personalizadas, apresentando os serviços oferecidos e os benefícios para os condomínios, negocia condições comerciais e contratuais, visando fechar acordos vantajosos para ambas as partes, gerencia a equipe de vendas, distribuindo metas e orientando os colaboradores no desenvolvimento de estratégias de venda, acompanha o desempenho da equipe, oferecendo feedbacks e promovendo treinamentos para aprimoramento profissional, analisa o mercado concorrente, identificando pontos fortes e fracos para desenvolver estratégias de diferenciação, participa de eventos e feiras do setor condominial, buscando networking e oportunidades de negócio, realiza reuniões periódicas com a equipe comercial.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Gerente de Contratos",
+          "desc": "Realiza atividades burocráticas em geral no escritório da empresa envolvendo as áreas de administração de contratos entre empresa e clientes; analisa prestação dos serviços nas condições, valores e margens negociadas; recebe e analisa solicitações de aditivos de contrato; providencia garantias contratuais; orienta e supervisiona a emissão e recebimento do faturamento; recebe, analisa, trata e estabelece medidas ante a reclamações; controla follow up de planos de ação; prepara mapas e quadros demonstrativos sobre o desempenho de contratos; participa de auditorias; participa de reuniões; apura e analisa indicadores de desempenho; desenvolve normas e procedimentos administrativos.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Gesseiro",
+          "desc": "Desenvolve atividades operacionais envolvendo instalação de gesso em tetos, sancas, paredes, revestimentos, vãos, etc., prepara o gesso, misturando-o com água até obter uma consistência adequada, aplica o gesso nas paredes e tetos, utilizando ferramentas apropriadas, nivela e alisa a superfície do gesso, garantindo um acabamento uniforme, faz recortes e encaixes nas peças de gesso, conforme necessário, instala molduras, sancas e outros elementos decorativos em gesso, repara e corrige imperfeições no gesso, preenchendo rachaduras e buracos, lixa e poli o gesso, deixando-o pronto para receber a pintura ou revestimento, realiza acabamentos especiais, como texturas e relevos, utilizando técnicas específicas, monta estruturas de gesso, como divisórias e forros, seguindo projetos e especificações, posiciona e fixa as placas de gesso nos locais designados, instala sistemas de iluminação embutida no gesso, como spots e lâmpadas, utiliza equipamentos e ferramentas manuais.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Graniteiro",
+          "desc": "Desenvolve atividades de transporte, preparação e instalação de pedras em ambientes diversos; recebe, auxilia no transporte, acompanha estocagem; executa corte, lixamento e polimento de pedras; aplica ceras de polimento; prepara pequenas porções de massa para assentamento de pedras; executa pequenos acabamentos na instalação; instala pedras acabadas; promove levantamento, transporte e deposição de materiais diversos",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Guincheiro",
+          "desc": "Desenvolve atividades operacionais envolvendo suporte e apoio a todos os profissionais da obra, em todas as áreas, na operação de elevador de pessoas e cargas, opera elevador de transporte de pessoas e materiais para o atendimento a todos os setores de obras, promove o transporte de pessoas para os locais diversos da obra durante toda a jornada e, em especial pela manhã, para o almoço e para o fim da jornada, realiza o apoio no carregamento e descarregamento de/para o equipamento, envolvendo materiais diversos, tais como sacos de cimento, pisos, tijolos, escoras, fiações, louças, metais, etc., realiza a operação do equipamento no transporte de materiais diversos para a execução da obra, executa a operação do equipamento para remoção de entulhos diversos, efetua a inspeção periódica do equipamento, preenchendo check list, informa irregularidades no equipamento, acompanha inspeções, manutenções e reparos no equipamento.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Lapidador",
+          "desc": "Desenvolve atividades operacionais envolvendo execução de produção; recebe ordens de serviço; auxilia no transporte manual de peças em vidro; confere parâmetros de máquinas; opera máquinas lapidadoras, furadeiras e lavadoras de vidros; efetua carregamento e descarregamento de caminhão; auxilia no setor de alumínio; auxilia no carregamento e descarregamento de materiais; realiza limpezas nos locais de trabalho.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Lapidador Mestre",
+          "desc": "Desenvolve atividades operacionais envolvendo execução de produção; recebe ordens de serviço; auxilia no transporte manual de peças em vidro; confere parâmetros de máquinas; opera máquinas lapidadoras, furadeiras e lavadoras de vidros; efetua carregamento e descarregamento de caminhão; auxilia no setor de alumínio; auxilia no carregamento e descarregamento de materiais; realiza limpezas nos locais de trabalho.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Líder de expedição",
+          "desc": "Desenvolve atividades operacionais envolvendo a conferência de cargas, acompanha o planejamento de movimentação de cargas em caminhões e utilitários, recebe e verifica ordens de serviço, efetua o recebimento de caminhões e utilitários, orienta e determina a localização de armazenamento de cargas encontradas em caminhões e utilitários, orienta operadores de movimentação, verifica e inspeciona caminhões e utilitários, acompanha atividades de produção, conferência e verificação de documentação de cargas, preenche check lists, relatórios, guias, boletins, plano de carga e recibos, elabora relatórios.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Líder de Lanchonete",
+          "desc": "Desenvolve atividades operacionais envolvendo o primeiro atendimento a clientes; recepciona e atende clientes, visitantes e terceiros; indica mesa para atendimento; fornece informações a clientes, vendedores e fornecedores; efetua controles de entrada se saídas; higieniza áreas, utiliza produtos, equipamentos e utensílios adequados.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Líder de Sessão",
+          "desc": "Desenvolve atividades operacionais envolvendo assistência nutricional ao estabelecimento; planeja e elabora cardápio de produtos; observa, analisa e verifica adequação dos alimentos e balanceamento nutricional; acompanha o fornecimento das matérias-primas a serem utilizadas, o pré-preparo dos alimentos e sua apresentação final; monitora manuseio dos produtos dentro dos padrões de qualidade, segurança e higiene; orienta atividades para a higienização do ambiente e equipe, alimentos, equipamentos e utensílios; realiza reuniões com equipe de trabalho; desenvolve e ministra treinamentos; verifica cumprimento de tarefas obrigatórias de acordo com órgãos fiscalizadores; desenvolve novas receitas para preparo no local; solicita serviços de manutenção, quando necessário; orienta pesquisa e seleção de fornecedores, aquisição de produtos, etc.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Maitre",
+          "desc": "Desenvolve atividades operacionais envolvendo recepção e atendimento a clientes; recepciona os clientes e os acompanha até as mesas disponíveis; apresenta o cardápio e oferece sugestões aos clientes; auxilia na escolha de vinhos e outras bebidas; coordena a equipe de garçons e demais funcionários do salão; realiza o atendimento aos clientes de forma cortês e profissional; verifica a satisfação dos clientes durante o serviço; resolve problemas e reclamações dos clientes; coordena a organização e distribuição das mesas no salão; supervisiona o serviço de montagem e arrumação das mesas; orienta a equipe quanto aos procedimentos e padrões de atendimento; realiza o controle de reservas e gerencia a disponibilidade de mesas; coordena o serviço de atendimento em eventos especiais; auxilia no treinamento e capacitação da equipe de atendimento; realiza o controle de qualidade do serviço; acompanha o cumprimento das normas de higiene e segurança alimentar.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Manicure",
+          "desc": "Desenvolve atividades operacionais envolvendo tratamento preventivo e corretivo das unhas; esmalta unhas dos dedos das mãos e dos pés; limpa, corta e molda unhas; recomenda cores, cristais e desenhos com base no estilo da cliente; remove o esmalte aplicado anteriormente; prepara e limpa a estação de trabalho entre atendimentos; aplica bases e esmalte em unhas das mãos e dos pés; esteriliza o equipamento antes da utilização; informa clientes sobre serviços e ofertas adicionais; oferece e executa massagens nas mão e nos pés apresenta dicas para cuidar das unhas; vende produtos de beleza e tratamentos adicionais.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Manobrista",
+          "desc": "Desenvolve atividades operacionais envolvendo direção e manobra de veículos para atendimento a clientes do estabelecimento; recebe clientes, orienta, assessora, dirime dúvidas; recebe veículos de clientes, dirige e manobra até a vaga correspondente; detêm sob sua posse as chaves dos veículos encontrados no estacionamento; mantém vigilância sobre o estacionamento e os veículos encontrados no mesmo; auxilia clientes na escolha de vagas; organiza veículos no estacionamento; dirige e manobra veículos para entregar aos clientes.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Marmorista",
+          "desc": "Desenvolve atividades de transporte, preparação e instalação de pedras em ambientes diversos; recebe, auxilia no transporte, acompanha estocagem; executa corte, lixamento e polimento de pedras; aplica ceras de polimento; prepara pequenas porções de massa para assentamento de pedras; executa pequenos acabamentos na instalação; instala pedras acabadas; promove levantamento, transporte e deposição de materiais diversos.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Mecânico",
+          "desc": "Desenvolve atividades de manutenção mecânica de máquinas, equipamentos e instalações da empresa, analisa, prepara, atende a programações, executa desmontagem de peças e instalações, inspeciona e revisa máquinas, equipamentos e instalações, repara defeitos em defeitos, substitui peças, lubrifica, remonta, realiza reposição de peças e acessórios, retesta, interpreta desenhos e esquemas mecânicos, solicita remoção, substituição e reparos, solicita orçamentos, efetua inspeções de rotina, preventivas, preditivas e corretivas, promove levantamento, transporte e deposição de materiais diversos.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Meio Oficial Mecânico",
+          "desc": "Desenvolve atividades operacionais envolvendo auxilio e suporte na manutenção mecânica de automóveis; organiza local, máquinas, equipamentos, ferramentas e materiais; recebe ordem de serviço, analisa, inspeciona, avalia e identifica condições e problemas em automóveis; estuda o trabalho de reparação a ser realizado; desmonta e limpa motor, órgãos de transmissão, diferencial e outras partes que requeiram exame; cuida da manutenção de órgãos de transmissão, freios, direção, suspensão; prepara peças para inspeção e reparação; substitui, ajusta ou retifica peças do motor, como anéis de êmbolo, bomba de óleo, válvula, cabeçote, mancais, árvores de transmissão; repara ou regula o sistema de freio, sistema de ignição, sistema de alimentação de combustível, sistemas de lubrificação e de arrefecimento, sistema de transmissão, sistema de direção e sistema de suspensão; efetua testes no veículo; executa inspeção final pós execução; efetua limpeza do veículo após o término dos serviços; solicita peças e equipamentos",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Mestre de Obras",
+          "desc": "Desenvolve atividades operacionais envolvendo supervisão de profissionais de civil da obra, execução de nível manual ou a laser e marcações, execução de alvenaria de tijolos, blocos de concreto, elementos vazados, etc., execução de revestimentos sobre estrutura, paredes, pisos e forros, internos e/ou externos, instalação de contra marcos, portas, esquadrias e guarda corpos, carregamento e descarregamento manual ou mecanizado de materiais diversos, transporte e descarte de entulhos em geral, organização de áreas externas, internas, do canteiro de obras, realização de demolições manuais, tais como quebra de paredes, pisos, etc., acompanhamento de concretagens, limpeza e lavagem de ambientes do canteiro de obras, bem como limpeza e varrição da obra e de equipamentos e ferramentas em geral, acompanhamento de preparação de massas em geral, análise de plantas, tabelas, relatórios, etc., check list final, acompanhamento de limpezas finas e grossas de obras, realização de reuniões.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Monitor",
+          "desc": "Desenvolve atividades operacionais envolvendo divulgação comercial de cursos da instituição; atende clientes; fornece informações a clientes sobre cursos da instituição; apresenta a escola a prospectivos clientes; dirime dúvidas de clientes; cadastra matrículas no sistema, para controle e faturamento; mantém contato com clientes, via e-mail ou telefone, oferecendo ou cotando os cursos da instituição visando o fechamento de matrículas; prospecta novos clientes visando a comercialização dos cursos da instituição; registra dados para cadastro; acompanha atendimento de pedidos dentro dos prazos negociados com o cliente; controla metas estabelecidas de vendas de cursos; procede à reativação de clientes inativos, mediante orientações do superior, atualizando o cadastro no sistema informatizado da empresa disponibilizando-o para novos pedidos; participa de reuniões.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Montador de Esquadrias",
+          "desc": "Desenvolve atividades de confecção de esquadrias, portas, grades, vitrais, aramados, fechamentos, vedações, ornamentos de material alumínio, ferro, aço; recebe, verifica e acondiciona materiais; prepara bancada de trabalho; confecciona barras perfiladas de alumínio para fabricar esquadrias, portas, grades, vitrais, aramados, fechamentos, vedações, ornamentos; corta, fura, modela, lixa, arrebita, mede, esquadreja chapas, perfis e peças em separado; monta o conjunto de barras, perfis e chapas; auxilia no carregamento e descarregamento de materiais; instala no local as esquadrias, portas, grades, vitrais, aramados, fechamentos, vedações, ornamentos confeccionados; eventualmente realiza solda.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Motoboy",
+          "desc": "Desenvolve atividades operacionais envolvendo a entrega de pratos e bebidas; recebe as ordens de entrega do restaurante; verifica e organiza os itens a serem entregues; realiza a conferência e verifica a correta embalagem dos pedidos; monta as sacolas ou mochilas de entrega de forma organizada; planeja a rota mais eficiente para as entregas; conduz a motocicleta de forma segura e responsável; entrega os pedidos aos clientes dentro do prazo estipulado; verifica se os itens entregues estão corretos e em bom estado; recebe os pagamentos e emite recibos, se aplicável; mantém contato com a equipe do restaurante para atualizações ou mudanças nas entregas; zela pela segurança dos pedidos e dos documentos entregues; cumpre as normas de trânsito e direção defensiva; mantém a motocicleta limpa e em bom estado de funcionamento; registra as entregas realizadas e os problemas ocorridos, se necessário; cumpre as diretrizes e políticas estabelecidas pela administração do restaurante.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Motorista",
+          "desc": "Desenvolve atividades de transportes envolvendo direção e manobra de veículos, acompanha a carga e descarga de materiais, inspeciona e verifica notas fiscais, realiza o transporte de veículo de carga, inspeciona e executa amarrações de cargas, efetua inspeções e verificações em veículo.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Motorista Caminhão Truck",
+          "desc": "Realiza a atividade de direção e manobra de veículos; prepara o veículo para carga e descarga, com patola do equipamento; acompanha e executa com guindauto, a carga e descarga de materiais; inspeciona e verifica notas fiscais; inspeciona e executa amarrações de cargas; efetua inspeções e verificações em veículo; transporta pessoas e cargas; realiza abastecimento de veículo e pequenas verificações de óleo de motor, fluido de freio.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Motorista de Carreta",
+          "desc": "Desenvolve atividades de transporte envolvendo direção, manobra e transporte descargas em geral em caminhões carreta, responsável por trazer para a empresa matriz toda a carga localizada na empresa filial, recebe itinerário de entrega, acompanha a carga e descarga de materiais, auxilia na carga e descarga dos volumes das carrocerias dos veículos utilizados, inspeciona e verifica notas fiscais, relatórios, pedidos e outros, inspeciona e executa amarrações de cargas, realiza o transporte de veículo de carga, efetua inspeções e verificações em veículo, define rotas de transporte, solicita serviços de manutenção preventiva ou corretiva.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Nutricionista",
+          "desc": "Desenvolve atividades operacionais envolvendo assistência nutricional ao estabelecimento; planeja e elabora cardápio de produtos; observa, analisa e verifica adequação dos alimentos e balanceamento nutricional; acompanha o fornecimento das matérias-primas a serem utilizadas, o pré-preparo dos alimentos e sua apresentação final; monitora manuseio dos produtos dentro dos padrões de qualidade, segurança e higiene; orienta atividades para a higienização do ambiente e equipe, alimentos, equipamentos e utensílios; realiza reuniões com equipe de trabalho; desenvolve e ministra treinamentos; verifica cumprimento de tarefas obrigatórias de acordo com órgãos fiscalizadores; desenvolve novas receitas para preparo no local; solicita serviços de manutenção, quando necessário; orienta pesquisa e seleção de fornecedores, aquisição de produtos, etc.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Office Boy",
+          "desc": "Desenvolve atividades administrativas envolvendo atendimento telefônico, envio e recebimento de e-mails, solicitações de pedidos, conferência de materiais, controle de estoques, preenchimento de check lists; recebe e confere documentos (notas fiscais, requisições, pedidos de compra, etc.); verifica o preenchimento dos dados; recolhe a correspondência interna e documentos; prepara malotes; emite e/ou arquiva os respectivos protocolos; efetua a rastreabilidade das cargas; atendimento aos clientes; execução de serviços administrativos diversos em apoio à área, como a organização de arquivos, reprodução de cópias, retirada de materiais, atendimento telefônico e transferência aos ramais, etc.; auxilia no inventário do estoque de matérias primas; contagem física dos itens armazenados",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Operador de Caixa",
+          "desc": "Desenvolve atividades operacionais envolvendo atendimento a clientes no caixa, registra com precisão os produtos adquiridos pelos clientes, recebe pagamentos em dinheiro, cartão de crédito ou débito, emite recibos e comprovantes de compra, fornece informações sobre preços e produtos, assegura a limpeza e organização do balcão de pagamento, auxilia os clientes com cortesia e eficiência, faz a abertura e o fechamento do caixa, verifica a autenticidade das notas e moedas, mantém a gaveta de dinheiro abastecida e organizada, resolve possíveis problemas com transações e pagamentos, mantém-se atento a tentativas de fraudes e falsificações, oferece troco correto aos clientes, opera máquinas de cartão de crédito e sistemas de pagamento eletrônico, ajuda na embalagem dos produtos adquiridos, monitora as filas e o tempo de espera dos clientes, mantém um padrão de atendimento ao cliente de alta qualidade, garante a confidencialidade das informações de pagamento, efetua devoluções e reembolsos.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Operador de Empilhadeira",
+          "desc": "Desenvolve atividades operacionais envolvendo operação de máquina de elevação de produtos e mercadorias; opera equipamento empilhadeira de pequeno porte, em serviços de movimentação interna de produtos e mercadorias; recebe e verifica ordens de serviço; verifica em procedimentos operacionais a execução de cada ordem de serviço, os métodos, técnicas, formas de elevação, retirada, transporte e deposição de produtos e mercadorias; realiza inspeção do equipamento; preenche relatórios e check lists; solicita manutenções e reparos, segundo as inspeções realizadas.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Operador de Espargidor",
+          "desc": "Desenvolve atividades de operação de máquinas espargidora de emulsão asfáltica; opera caneta espargidora de emulsão asfáltica do caminhão espargidor; aplica emulsão em forma de jato nos leitos das vias carroçáveis; auxilia rastelamento do asfalto colocado; corrige imperfeições em emendas; realiza inspeções em veículos; verifica documentação de veículos e de cargas; efetua inspeções e verificações em veículo",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Operador de Loja",
+          "desc": "Desenvolve atividades operacionais envolvendo atendimento a clientes, realiza a reposição e organização de produtos nas prateleiras, verifica a validade dos produtos, atende e auxilia os clientes na escolha dos produtos, fornece informações sobre produtos e promoções, realiza o empacotamento, auxilia na conferência de mercadorias recebidas, repõe carrinhos e cestas de compras, realiza a limpeza e organização das áreas de vendas, verifica e abastece os displays e expositores, auxilia na precificação e etiquetagem de produtos, realiza a conferência e controle de estoque, opera equipamentos como balanças e leitores de código de barras, mantém-se atento(a) a possíveis furtos e roubos, auxilia na organização de eventos e promoções, realiza a conferência e fechamento de caixa, colabora na execução de tarefas administrativas, participa de treinamentos para atualização de conhecimentos, mantém o ambiente de trabalho limpo e organizado, cumpre as normas e procedimentos internos da padaria.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Operador de Manutenção",
+          "desc": "Desenvolve atividades operacionais envolvendo execução de manutenções no estabelecimento; recebe ordens de serviço; avalia e inspeciona equipamentos, ferramentas e acessórios; inspeciona ambientes e instalações; registra inspeções; preenche check lists, relatórios, documentos diversos; acompanha empresas terceirizadas de manutenção; reporta condições de ambientes, instalações, máquinas e equipamentos; pode realizar manutenções em elétrica, pintura, hidráulica e refrigeração.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Operador de Máquinas",
+          "desc": "Desenvolve atividades operacionais envolvendo operação de máquina de elevação de produtos e mercadorias, opera equipamento empilhadeira de pequeno porte, em serviços de movimentação interna de produtos e mercadorias, recebe e verifica ordens de serviço, verifica em procedimentos operacionais a execução de cada ordem de serviço, os métodos, técnicas, formas de elevação, retirada, transporte e deposição de produtos e mercadorias, realiza inspeção do equipamento, preenche relatórios e check lists, solicita manutenções e reparos, segundo as inspeções realizadas.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Operador de Munck",
+          "desc": "Desenvolve atividades de operação de caminhão Munck; define rotas de transporte; executa a carga e descarga de materiais com uso de munck; inspeciona e verifica notas fiscais; verifica documentação de veículos e de cargas; inspeciona e executa amarrações de cargas; coleta, transporta e entrega cargas em geral; movimenta cargas volumosas e pesadas; realiza inspeções em veículos; efetua inspeções e verificações em veículo; realiza abastecimento de veículo e pequenas verificações de óleo de motor, fluido de freio.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Operador de Ponte Rolante",
+          "desc": "Desenvolve atividades operacionais envolvendo operação de ponte rolante; recebe ordens de serviço; auxilia no transporte manual de peças em vidro; confere parâmetros de máquinas; opera máquina ponte rolante; auxilia no setor de alumínio; auxilia no carregamento e descarregamento de materiais; realiza limpezas nos locais de trabalho.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Operador de Rolo",
+          "desc": "Desenvolve atividades de operação de máquina motorizada e provida de um ou mais rolos compressores ou cilindros; opera, aciona, manipula comandos de marcha e direção; realiza a compactação de solos naturais ou corrigidos e ou comprimir e regularizar os elementos usados na pavimentação de rodovias, ruas, pistas de aeroportos e outras obras; conduzir máquina, acionando o motor e manipulando os comandos de marcha e direção, para fazer avançar e retroceder o rolo compressor ou cilindros até que a superfície fique suficientemente compactada e lisa; efetuar a manutenção da máquina, lubrificando-a e executando pequenos reparos, para mantê-la em boas condições de funcionamento.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Operador de Vácuo",
+          "desc": "Desenvolve atividades operacionais envolvendo limpeza de fossas, caixas de gordura e banheiros químicos; retira de detritos com auxílio de mangueiras e bomba de vácuo instalado no caminhão; opera a bomba de vácuo do caminhão; opera os comandos do equipamento de hidrojateamento; transporta manualmente os materiais a serem utilizados; opera a máquina elétrica desentupidora de cabo espiral",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Orientador",
+          "desc": "Desenvolve atividades operacionais envolvendo divulgação comercial de cursos da instituição; atende clientes; fornece informações a clientes sobre cursos da instituição; apresenta a escola a prospectivos clientes; dirime dúvidas de clientes; cadastra matrículas no sistema, para controle e faturamento; mantém contato com clientes, via e-mail ou telefone, oferecendo ou cotando os cursos da instituição visando o fechamento de matrículas; prospecta novos clientes visando a comercialização dos cursos da instituição; registra dados para cadastro; acompanha atendimento de pedidos dentro dos prazos negociados com o cliente; controla metas estabelecidas de vendas de cursos; procede à reativação de clientes inativos, mediante orientações do superior, atualizando o cadastro no sistema informatizado da empresa disponibilizando-o para novos pedidos; participa de reuniões.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Padeiro",
+          "desc": "Desenvolve atividades operacionais envolvendo a fabricação de pães e derivados, prepara a massa de pão de acordo com receitas específicas, pesa e mede os ingredientes necessários, como farinha, água, fermento e sal, mistura os ingredientes para formar uma massa homogênea, sova e molda a massa em diferentes formatos, como baguetes, pães redondos e pães doces, faz cortes decorativos na superfície do pão, prepara recheios, coberturas e glacês, quando aplicável, opera fornos industriais e controla a temperatura e o tempo de cozimento, coloca pães e massas no forno e retira quando estão dourados e cozidos, ajusta a receita e o processo conforme necessário, acompanha o tempo de fermentação da massa, verifica a qualidade dos ingredientes e descarta qualquer item fora do prazo de validade, mantém a área de trabalho limpa e organizada, opera equipamentos de panificação, como amassadeiras e laminadoras, segue rigorosamente as diretrizes de higiene e segurança alimentar.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Pedreiro",
+          "desc": "Desenvolve atividades operacionais envolvendo serviços de civil em obras, prepara e organiza os materiais e ferramentas necessários, realiza o assentamento de tijolos, blocos e demais elementos de alvenaria, executa o revestimento de paredes com argamassa, realiza o nivelamento e o prumo das estruturas, faz o reboco e o acabamento das superfícies, realiza o assentamento de pisos e azulejos, coloca e ajusta esquadrias, portas e janelas, faz o preparo e a aplicação de concreto e argamassa, constrói e arma formas para concretagem, realiza pequenas demolições e remoções, executa o assentamento de elementos estruturais, como vigas e colunas, faz o preparo e o assentamento de blocos de fundação, realiza a limpeza e a organização do canteiro de obras, realiza a leitura e interpretação de projetos, realiza a manutenção e o reparo de estruturas existentes, verifica a qualidade e a resistência dos materiais utilizados, utiliza equipamentos de proteção individual, como capacete e luvas.",
+          "riscos": "808 - Radiação não ionizante - Ultravioleta                                   49 - Ruído contínuo ou Intermitente                                              792 - Vibração localizada - mãos e braços                                   132 - Cimento                                                                                      231 - Poeira Respirável                                                                    866 - Levantamento e transporte manual de cargas ou volumes                                                                            672 - Posturas desconfortáveis [Cod: 09.01.001]                           731 - Batida Contra [Cod: 09.01.001]                                                   920 - Objetos cortantes e/ou perfurocortantes [Cod: 09.01.001]                                                                                                      869 - Piso escorregadio e/ou irregular [Cod: 09.01.001]              733 - Queda de mesmo nível [Cod: 09.01.001]                                   705 - Queda de objetos [Cod: 09.01.001]                                            603 - Trabalho em Altura [Cod: 09.01.001]                                           009 - Umidade [Cod: 09.01.001]",
+          "exam": ""
+        },
+        {
+          "cargo": "Pedreiro Fachadeiro",
+          "desc": "Desenvolve atividades de civil sobre fachadas, beirais, sacadas e faces externas de construções, com o apoio de andaimes, balancins e plataformas, execução de nível manual ou a laser e marcações em lajes, pilares e vigas, execução de alvenaria de tijolos, blocos de concreto, elementos vazados, em fachadas de edifícios, execução de regularizações em geral, revestimentos sobre estrutura, paredes, pisos e forros, internos e/ou externos, tais como emboço, reboco, massa corrida, pintura, cerâmicos e pedras diversos em fachadas de edifícios, execução de requadrações em geral em beirais, vigas, pilares, etc., em fachadas e sacadas de edifícios, realização de pequenas demolições manuais, tais como quebra de paredes, pisos, etc., preparação de massas em geral de forma manual ou com auxílio de masseira/misturador, análise de plantas, tabelas, relatórios, catálogos, etc.",
+          "riscos": "808 - Radiação não ionizante - Ultravioleta                                   49 - Ruído contínuo ou Intermitente                                              792 - Vibração localizada - mãos e braços                                   132 - Cimento                                                                                      231 - Poeira Respirável                                                                    866 - Levantamento e transporte manual de cargas ou volumes                                                                            672 - Posturas desconfortáveis [Cod: 09.01.001]                           731 - Batida Contra [Cod: 09.01.001]                                                   920 - Objetos cortantes e/ou perfurocortantes [Cod: 09.01.001]                                                                                                      869 - Piso escorregadio e/ou irregular [Cod: 09.01.001]              733 - Queda de mesmo nível [Cod: 09.01.001]                                   705 - Queda de objetos [Cod: 09.01.001]                                            603 - Trabalho em Altura [Cod: 09.01.001]                                           009 - Umidade [Cod: 09.01.001]",
+          "exam": ""
+        },
+        {
+          "cargo": "Pintor",
+          "desc": "Desenvolve atividades operacionais envolvendo execução de pintura de superfícies internas e externas de edifícios e outras obras civis, prepara as superfícies a serem pintadas, como lixamento e aplicação de massa corrida, protege áreas adjacentes, como pisos e móveis, com coberturas adequadas, escolhe as tintas e materiais apropriados para cada tipo de superfície, aplica a tinta utilizando pincéis, rolos ou pistolas de pintura, realiza a pintura de paredes, tetos, portas, janelas e outros elementos, faz acabamentos, como aplicação de texturas, vernizes ou esmaltes, verifica a uniformidade da pintura e realiza retoques quando necessário, realiza a limpeza e a manutenção dos equipamentos de pintura, colabora com a equipe de trabalho, auxiliando em outras atividades quando necessário, presta atenção aos detalhes e busca um acabamento de qualidade, realiza testes de aderência e resistência da tinta quando solicitado, cumpre os prazos estabelecidos para a conclusão das tarefas.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Pizzaiolo",
+          "desc": "Desenvolve atividades operacionais envolvendo a preparação de pizzas e derivados; recebe informação de produção com as necessidades de fabricação; requisita do estoque e retira quantidade de matéria-prima necessária (farinha, fermento, etc.); prepara equipamentos, com limpeza e remoção de resíduos, regula controles de tempo do processo, velocidade de misturadores, espessura de laminação, etc.; pesa, mede, adiciona componentes e aciona equipamentos; elabora massas, mistura,  bate, cilindra, molda e encaminha para assadura; acompanha a homogeneização dos produtos; limpa e lava o ambiente, mesas, balcões, superfícies, pias, equipamentos e utensílios utilizados; coleta amostras; encaminha produtos prontos para comercialização; pesquisa e desenvolve novas receitas de produtos e simulares em função da demanda de clientes ou diversidade dos produtos.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Pizzaiolo",
+          "desc": "Desenvolve atividades operacionais envolvendo a preparação de pizzas e derivados; prepara a massa de pizza e realiza o seu descanso; estica e abre a massa de acordo com o tamanho e formato desejados; aplica o molho de tomate e distribui de forma uniforme; adiciona os ingredientes e coberturas; controla a temperatura do forno e insere as pizzas para assar; monitora o tempo de cozimento e retira as pizzas do forno quando prontas; decora e finaliza as pizzas com ingredientes adicionais; corta as pizzas em fatias ou pedaços adequados; embala as pizzas para entrega ou para viagem; prepara as mesas e balcões com os utensílios e condimentos; atende aos pedidos dos clientes; fornece informações sobre os sabores e ingredientes das pizzas; realiza a reposição de ingredientes e mantém o estoque organizado; mantém a estação de trabalho limpa e higienizada; cumpre as normas de higiene e segurança alimentar",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Podólogo",
+          "desc": "Desenvolve atividades operacionais envolvendo podologia preventiva e corretiva; atua focado nas atividades de prevenção de podopatias, tais como unhas encravadas, frieiras, rachaduras no calcanhar, micoses, bolhas, maus odores; realiza a avaliação da postura, do equilíbrio, da pisada e de calçados de pacientes; realiza higienização dos pés; efetua corte técnico; executa lixamento das unhas, remoção de calosidades entre os dedos ou ao redor da planta do pé; realiza massagem relaxante; atua nas atividades corretivas, tratamento de calos, anidrose, pé reumático, calcanhar rachado, dedos em garra, maceração interdigital, onicogrifose, onicomicose e onicosclerose; realiza a avaliação de retorno sanguíneo, observação de microvasos trombosados e varizes; efetua diagnóstico e tratamento de podopatias, como calosidades, micoses, fungos, rachaduras, bolhas, etc.; promove a orientação para o uso de palmilhas, meias especiais e calçados adequados à situação do paciente.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Porteiro",
+          "desc": "Desenvolve atividades operacionais envolvendo o controle de acesso de pessoas e veículos, controla o acesso de pessoas e veículos, realiza a identificação e registro de visitantes, zela pela segurança e ordem no ambiente, orienta sobre normas e procedimentos internos, monitora câmeras de vigilância, atua na recepção e encaminhamento de entregas, presta informações básicas aos visitantes, realiza rondas preventivas nas instalações, aciona os responsáveis em casos de emergência, opera equipamentos de comunicação, mantém contato com a equipe de segurança, colabora na fiscalização do estacionamento, realiza o cadastro de visitantes e prestadores de serviço, controla o acesso a áreas restritas, zela pela integridade patrimonial, observa e relata atividades suspeitas, executa procedimentos de prevenção de perdas, mantém postura profissional e cordial, utiliza uniforme e crachá de identificação, cumpre os procedimentos de segurança estabelecidos, contribui para a boa imagem da empresa.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Promotor Externo",
+          "desc": "Desenvolve atividades operacionais envolvendo divulgação de produtos, serviços e promoções ao público; acompanha a atuação da concorrência no local de venda e apresenta sugestões; pesquisa periodicamente os preços e condições praticados pelos concorrentes, para apreciação e decisão dos superiores; acolhe opiniões dos clientes sobre o atendimento oferecido, características dos produtos, serviços e promoções, etc.; recebe material de divulgação; recebe orientações de divulgação e informações sobre produtos e serviços da organização; aborda público; oferece produtos e serviços e suas respectivas promoções; presta orientações e informações ao público; entrega material de material de divulgação de produtos e serviços e suas respectivas promoções; apresenta relatórios ao departamento.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Rasteleiro",
+          "desc": "Desenvolve atividades de execução finalização de processos de pavimentação asfáltica; promove o acabamento e reparo de emendas em pavimentação asfáltica, lombadas e faixas de pedestres; espalhamento de massas asfálticas em locais; aplicação de rastelo para pavimentação; nivelamento de asfalto; acabamento manual de asfalto; aplicação de asfalto; execução de acabamento asfáltico.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Recepcionista",
+          "desc": "Realiza atividades operacionais envolvendo a recepção de hóspedes e atendimento a visitantes, fornecedores e terceiros; recepciona hóspedes; verifica taxa de ocupação e quartos desocupados; define quartos disponíveis; aloca hóspedes; solicita limpeza de quartos livres; recebe pagamento por serviços de hospedaria; encaminha visitantes às áreas respectivas; presta informações diversas; dirime dúvidas; atende ligações telefônicas; elabora relatórios; mantém sistema informatizado atualizado com dados de hóspedes; mantém sistema informatizado atualizado com dados de quartos livres e ocupados; sistema informatizado atualizado com dados de quartos limpos e a limpar.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Recepcionista",
+          "desc": "Desenvolve atividades operacionais envolvendo a recepção pessoas; recepciona os visitantes e clientes; realiza o atendimento telefônico; recebe e registra correspondências e encomendas; controla o acesso de pessoas às dependências da empresa; presta suporte na marcação de reuniões e agendamento de salas; organiza e mantém atualizada a agenda de compromissos da equipe ou do gestor; realiza o controle e o registro de entrada e saída de funcionários, visitantes e prestadores de serviço; recebe e encaminha recados e informações internas; contribui na manutenção da organização da recepção e áreas adjacentes; realiza o controle e a distribuição de crachás e identificações de acesso; presta suporte na emissão e controle de comprovantes de recebimento de documentos; contribui no controle e solicitação de materiais de escritório para a recepção; presta suporte na recepção e triagem de currículos e documentos relacionados a processos seletivos; auxilia na organização e reserva de salas.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Repositor",
+          "desc": "Desenvolve atividades operacionais envolvendo reposição de produtos e mercadorias no estabelecimento; percorre todas as áreas de mercadorias do estabelecimento; verifica a necessidade de reposição de produtos e mercadorias; avalia o estado de produtos e mercadorias; verifica as condições de etiquetas de precificação e tarjas para a adequada visualização em produtos e mercadorias; retira produtos e mercadorias que não estejam adequados e segundo padrões; organiza produtos e mercadorias; relaciona produtos e mercadorias a serem repostos; abre embalagens de produtos e mercadorias e dispõe os mesmos nos locais adequados; efetua a reposição de produtos e mercadorias em gôndolas, prateleteiras, displays, etc.; efetua o levantamento e transporte de produtos e mercadorias; remove restos de embalagens e detritos para descarte.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Repositor",
+          "desc": "Desenvolve atividades de reposição de produtos e mercadorias no estabelecimento; percorre todas as áreas de mercadorias do estabelecimento; verifica a necessidade de reposição de produtos e mercadorias; avalia o estado de produtos e mercadorias; verifica as condições de etiquetas de precificação e tarjas para a adequada visualização em produtos e mercadorias; retira produtos e mercadorias que não estejam adequados e segundo padrões; organiza produtos e mercadorias; relaciona produtos e mercadorias a serem repostos; abre embalagens de produtos e mercadorias e dispõe os mesmos nos locais adequados; efetua a reposição de produtos e mercadorias em gôndolas, prateleteiras, displays, etc.; efetua o levantamento e transporte de produtos e mercadorias; remove restos de embalagens e detritos para descarte.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Secretária",
+          "desc": "Realiza atividades burocráticas em geral envolvendo apoio e suporte para a direção da empresa; atendimento telefônico; envio e recebimento de correspondências e e-mails; agendamento de compromissos, eventos e viagens; elaboração de pautas e atas; participação de reuniões; preenchimento de check lists; elaboração de relatórios, estatísticas, etc.; organização e controle de documentos; atualização de arquivos e cadastros; digitação, revisão e emissão de documentos; levantamento e leitura de dados. ",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Serrador de Mármore",
+          "desc": "Desenvolve atividades de transporte, preparação e instalação de pedras em ambientes diversos, recebe, auxilia no transporte, acompanha estocagem, executa corte, lixamento e polimento de pedras, aplica ceras de polimento, prepara pequenas porções de massa para assentamento de pedras, executa pequenos acabamentos na instalação, instala pedras acabadas, promove levantamento, transporte e deposição de materiais envolvendo materiais diversos de escritório, etc.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Serralheiro",
+          "desc": "Desenvolve atividades operacionais envolvendo confecção de esquadrias, portas, grades, vitrais, aramados, fechamentos, vedações, ornamentos de material alumínio, ferro, aço, interpreta projetos e desenhos técnicos, mede e marca corretamente os materiais a serem cortados, corta, molda e da forma aos materiais metálicos, como barras de ferro, utilizando equipamentos como serras, esmerilhadeiras e dobradeiras, solda e une as peças metálicas, realiza o acabamento das estruturas metálicas, lixando, polindo e pintando as superfícies, monta e instala portões, grades, esquadrias e outras estruturas metálicas, utilizando ferramentas de fixação como parafusos e rebites, verifica e ajusta a qualidade e precisão das estruturas metálicas, realiza reparos e manutenção em estruturas metálicas existentes, mantem a limpeza e organização do ambiente de trabalho, colabora com a equipe de produção e outros profissionais, seguindo as instruções e diretrizes estabelecidas, cumpre prazos e metas de produção",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Servente",
+          "desc": "Desenvolve atividades em suporte e apoio, incluindo o carregamento e descarregamento na obra de materiais diversos, tais como sacos de cimento, areia, pedra, pisos, tijolos, escoras, etc., efetua o transporte de materiais diversos dentro dos ambientes da obra, realiza o transporte e descarte de entulhos em geral, como papelões, restos de cimento, concreto, tijolos, ferros, etc., executa a organização de áreas internas e externas, do canteiro de obras, sanitários, vestiários, refeitório, almoxarifado, escritório, etc., efetua demolições manuais, tais como quebra de paredes, pisos, etc., executa e acompanha a execução de concretagens em blocos de fundações, pilares, lajes, vigas, cintas, etc., efetua a limpeza e varrição da obra e de equipamentos e ferramentas em geral, tais como refeitório, almoxarifado, escritório, ambientes em geral da obra, masseira, pás, enxadas, carrinhos, etc., prepara massas em geral de forma manual ou com auxílio de masseira/misturador.",
+          "riscos": "808 - Radiação não ionizante - Ultravioleta                                   49 - Ruído contínuo ou Intermitente                                              792 - Vibração localizada - mãos e braços                                   132 - Cimento                                                                                      231 - Poeira Respirável                                                                    866 - Levantamento e transporte manual de cargas ou volumes                                                                            672 - Posturas desconfortáveis [Cod: 09.01.001]                           731 - Batida Contra [Cod: 09.01.001]                                                   920 - Objetos cortantes e/ou perfurocortantes [Cod: 09.01.001]                                                                                                      869 - Piso escorregadio e/ou irregular [Cod: 09.01.001]              733 - Queda de mesmo nível [Cod: 09.01.001]                                   705 - Queda de objetos [Cod: 09.01.001]                                            603 - Trabalho em Altura [Cod: 09.01.001]                                           009 - Umidade [Cod: 09.01.001]",
+          "exam": ""
+        },
+        {
+          "cargo": "Serviços Gerais",
+          "desc": "Desenvolve atividades operacionais envolvendo limpeza e higienização de ambientes em geral; verifica e avalia estado geral dos locais de trabalho; retira produtos de limpeza e materiais; limpa, varre e higieniza áreas, ambientes, superfícies, utensílios; anota informações de controle em formulários; recolhe e transporta resíduos domésticos; solicita reposição de produtos de limpeza",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Soldador",
+          "desc": "Desenvolve atividades operacionais envolvendo serviços de solda para confecção de aramados, soldagem de peças metálicas, prepara e ajusta o equipamento de soldagem, interpreta desenhos e projetos para execução das soldas, realiza reparos e manutenção em estruturas metálicas, realiza cortes e preparação das peças a serem soldadas, opera máquinas de corte e dobra de metais, inspeciona visualmente as soldas realizadas, realiza testes de qualidade nas soldas, realiza limpeza e acabamento das peças soldadas, mantem a organização e limpeza do local de trabalho, realiza o controle e registro das atividades realizadas, comunica ao supervisor sobre eventuais problemas ou necessidades, realiza o manuseio correto de gases e equipamentos de soldagem, realiza outras atividades relacionadas à soldagem conforme demanda, aprimora constantemente suas habilidades e conhecimentos técnicos.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Supervisor",
+          "desc": "Desenvolve atividades operacionais envolvendo coordenação das atividades gerais do estabelecimento; solicita itens para pedidos nos setores; efetua cotações de itens a fornecedores; atende vendedores; efetua pagamentos a fornecedores; controla estoque de produtos; verifica a qualidade dos produtos; acompanha e controla o caixa; atende e confere mercadorias de fornecedores; gere pessoal; verifica, providencia a organização, limpeza e controle de produtos e mercadorias; atende clientes com solicitações, pedidos, informações, elogios e reclamações; estuda novos produtos.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Sushiman",
+          "desc": "Desenvolve atividades operacionais envolvendo a preparação de alimentos frios; prepara e corta os peixes e frutos do mar de acordo com as técnicas adequadas; molda e monta os sushis, sashimis e demais pratos de sushi; prepara o arroz sushi de forma correta e consistente; controla a qualidade dos ingredientes utilizados; garante a frescura e a higiene dos alimentos; utiliza facas e utensílios de corte de forma segura e habilidosa; monta e decora os pratos de forma atraente e visualmente apelativa; prepara os molhos e acompanhamentos tradicionais do sushi; colabora na criação de novos pratos e variações do menu; realiza a limpeza e higienização dos utensílios e equipamentos utilizados; mantém a estação de trabalho limpa e organizada; atende aos pedidos dos clientes de forma cortês e atenciosa; fornece informações sobre os diferentes tipos de sushi e sua preparação; trabalha em equipe com os demais profissionais da cozinha; cumpre as normas de higiene e segurança alimentar; cumpre as diretrizes e políticas estabelecidas pela administração do restaurante.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Técnico de Edificações",
+          "desc": "Realiza atividades burocráticas em geral no escritório da obra envolvendo consulta a projetos, atendimento telefônico, envio e recebimento de e-mails, solicitação e recebimento de orçamentos, medições, pedidos, conferência de materiais, verificação da qualidade dos serviços, medições de obra, medições de empreiteiros, preenchimento de check lists, elaboração de relatórios, estatísticas, etc.; executa atividades burocráticas em geral na obra, como preenchimento de relatórios, check lists, verificações, análises, conferências, validações, etc.; efetua inspeções técnicas em subsolo, térreo, garagens, tipos, lazer, veículos, máquinas, equipamentos, ferramentas, materiais e substâncias químicas; acompanha concretagens.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Técnico de Manutenção ",
+          "desc": "Desenvolve atividades operacionais envolvendo execução de manutenções no estabelecimento; recebe ordens de serviço; avalia e inspeciona equipamentos, ferramentas e acessórios; inspeciona ambientes e instalações; registra inspeções; preenche check lists, relatórios, documentos diversos; acompanha empresas terceirizadas de manutenção; reporta condições de ambientes, instalações, máquinas e equipamentos; pode realizar manutenções em elétrica, pintura, hidráulica e refrigeração.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Técnico de Manutenção em Máquinas",
+          "desc": "Desenvolve atividades operacionais envolvendo atividades de manutenção de máquinas e equipamentos do estabelecimento; recebe ordens de serviço; inspeciona continuamente máquinas e equipamentos do estabelecimento; realiza manutenção preventiva e corretiva de máquinas e equipamentos utilizados na fabricação de vidros, tais como fornos, laminadores, cortadeiras, lapidadoras, entre outros; diagnostica e soluciona problemas mecânicos, elétricos e eletrônicos nas máquinas e equipamentos; realiza a troca de peças e componentes danificados, ajusta e calibra máquinas e equipamentos; efetua a lubrificação de peças móveis; realiza a limpeza e higienização das máquinas e equipamentos; efetua a leitura e interpretação de desenhos técnicos, manuais de instruções e especificações dos equipamentos; elabora relatórios de manutenção; orienta e treina operadores de máquinas e equipamentos, quanto ao uso adequado dos mesmos, e aplicação de medidas de segurança.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Técnico de Segurança do Trabalho",
+          "desc": "Executar serviços administrativos diversos, atendimento aos clientes internas, elaboração de documentos (PPRA, PPP, PCMAT, entre outros), utilizar computador, impressora, telefone, entre outros, executar serviços externos (inspeções em empresas de diversos segmentos), utilizar veículo de passeio, equipamentos e utensílios de segurança e higiene do trabalho adequados (EPIs, decibelímetro, medidor de estresse térmico, água destilada, entre outros).",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Telefonista",
+          "desc": "Desenvolve atividades operacionais envolvendo atendimento telefônico; manipula equipamento telefônico; estabelece comunicações internas e externas; verifica agenda; atende solicitações, preenche relatórios; encaminha solicitações, queixas, reclamações e elogios; orienta procedimentos.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Telefonista",
+          "desc": "Desenvolve atividades operacionais envolvendo atendimento telefônico; manipula equipamento telefônico; estabelece comunicações internas e externas; verifica agenda; atende solicitações, preenche relatórios; encaminha solicitações, queixas, reclamações e elogios; orienta procedimentos.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Vidraceiro",
+          "desc": "Desenvolve atividades operacionais envolvendo atividades de corte e acabamento de vidros; recebe ordens de serviço; planeja as atividades de corte e acabamento de vidros, analisando informações das áreas de interface, selecionando ferramentas, requisitando matérias primas, preparando e operando máquinas de corte de vidros e ponte rolante; opera equipamentos e materiais para movimentação na linha de produção; controla processos de corte e acabamento em vidros, inspecionando e classificando matérias-primas e produtos; corrige anomalias no processo, monitorando cumprimento de metas de produção; corta, lapida, dá polimento em vidros.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Vigia",
+          "desc": "Desenvolve atividades de observação e fiscalização de obra; atende fornecedores, visitantes e terceiros; organiza entrada e saída de veículos e materiais; fiscaliza entrada e saída de pessoas materiais; efetuam vigilância sobre as dependências de obra; comunicam irregulares no patrimônio existente em obra.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Vigilante",
+          "desc": "Desenvolve atividades operacionais envolvendo observação e fiscalização do estabelecimento, realiza a vigilância e monitoramento do perímetro da obra, observa atentamente qualquer atividade suspeita ou incomum, faz rondas periódicas para verificar a segurança do local, registra a entrada e saída de pessoas e veículos, verifica a identificação e autorização de acesso, comunica imediatamente qualquer ocorrência ou irregularidade, mantém contato com a equipe de segurança e demais colaboradores, responde a chamados e atende telefonemas, controla o acesso de pessoas e veículos à obra, auxilia na orientação e direcionamento dos visitantes e prestadores de serviço, presta auxílio em situações de emergência, seguindo os protocolos estabelecidos, monitora o cumprimento das normas de segurança e procedimentos, zela pela integridade dos materiais e equipamentos da obra, colabora na manutenção da ordem e disciplina no local de trabalho, preenche relatórios e registros de atividades diárias",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Zelador",
+          "desc": "Desenvolve atividades operacionais envolvendo supervisionar a manutenção, conservação, limpeza e lavagem rotineira das áreas, verificar o funcionamento de equipamentos elétricos e hidráulicos, instalações e aparelhos de uso comum.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Técnico de Medição",
+          "desc": "Desenvolve atividades operacionais envolvendo consulta a projetos, atendimento telefônico, envio e recebimento de e-mails, solicitação e recebimento de orçamentos, medições, pedidos, conferência de materiais, verificação da qualidade dos serviços, medições de obra, preenchimento de check lists, elaboração de relatórios, estatísticas, etc., preenchimento de relatórios, verificações, análises, conferências, validações e efetua inspeções técnicas.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Frentista",
+          "desc": "Desenvolve atividades operacionais envolvendo o abastecimento dos tanques de combustível de veículos da frota da empresa e de terceiros, recebe solicitações de abastecimento e ordens de serviço, solicita o posicionamento dos veículos para abastecimento, efetua a operação de bomba de abastecimento e verifica a quantidade de combustível presente no tanque, abastece tanques de veículos da frota da empresa e de terceiros, solicita o abastecimento de tanque de combustível, solicita manutenção em instalações de bomba e tanque de combustível, elabora relatórios, realiza inspeções.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Ajudante de Estruturas Metálicas",
+          "desc": "Desenvolve atividades operacionais envolvendo execução de limpeza, arrumação e reparos em containers, organiza local, máquinas, equipamentos, ferramentas e materiais, recebe e verifica ordens de serviço, verifica em procedimentos operacionais a execução de cada ordem de serviço, métodos, técnicas, equipamentos, ferramentas e produtos, retira de almoxarifado equipamentos, ferramentas e produtos, limpeza e lavagem internas e externas de containers, lixamento e rebate de latarias de containers, auxilio na confecção de estrados de madeira para containers, auxilio nos serviços gerais da oficina de reparos, auxilia ocasionalmente em atividades de solda em partes de containers, auxilia ocasionalmente na preparação e diluição de tintas em geral e na pintura dos containers.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Pintor de Estruturas Metálicas",
+          "desc": "Desenvolve atividades operacionais envolvendo pintura de estruturas metálicas de containers, organiza local, máquinas, equipamentos, ferramentas e materiais, recebe e verifica ordens de serviço, verifica em procedimentos operacionais a execução de cada ordem de serviço, métodos, técnicas, equipamentos, ferramentas e produtos, retira de almoxarifado equipamentos, ferramentas e produtos, analisa, inspeciona, avalia e identifica condições e problemas em estruturas metálicas de containers, prepara e dilui tintas em geral, prepara superfícies para pintura, executa a pintura de estruturas metálicas de containers, executa a limpeza dos acessórios de pintura.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Conferente de Carga",
+          "desc": "Desenvolve atividades operacionais envolvendo conferência de cargas de containers, acompanha o planejamento de movimentação de containers, recebe e verifica ordens de serviço, efetua o recebimento de caminhões e containers, orienta e determina a localização de armazenamento de containers, orienta operadores de movimentação, verifica e inspeciona containers, avalia condições de containers e informa departamentos respectivos da empresa, preenche check lists, elabora relatórios.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Assistente de Entrada e Saída de Container",
+          "desc": "Desenvolve atividades administrativas envolvendo auxílio nas áreas de controle de logística de contêineres, realiza a conferência de notas fiscais, atende motoristas, preenche documentações pertinentes, prepara, emite e apresenta relatórios e demonstrativos de resultados, participa de reuniões, preenche planilhas e entrada de sistemas, determina regras e procedimentos em relação ao tráfego da frota de veículos da empresa, controla documentação da frota de veículos da empresa, acessa pátio para avaliação das condições da frota de veículos da empresa, participa de reuniões, elabora planilhas e relatórios, prepara indicadores e apresenta-os para a empresa.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Auxiliar de Refrigeração",
+          "desc": "Desenvolve atividades operacionais envolvendo auxílio na manutenção de equipamentos de refrigeração de containers, organiza local, máquinas, equipamentos, ferramentas e materiais, recebe e verifica ordens de serviço, verifica em procedimentos operacionais a execução de cada ordem de serviço, métodos, técnicas, equipamentos, ferramentas e produtos, acompanha a inspeção inicial de equipamentos de refrigeração de containers, retira de almoxarifado equipamentos, ferramentas e produtos, realiza limpeza de equipamentos de refrigeração de containers, executa pequenos reparos em equipamentos de refrigeração de containers, tais como substituição de peças e acessórios, pintura de peças e acessórios, auxilia na instalação e manutenção de peças e acessórios, auxilia na inserção de gás refrigerante em equipamentos de refrigeração de containers, acompanha testes em equipamentos de refrigeração de containers.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Mecânico de Empilhadeira",
+          "desc": "Desenvolve atividades operacionais envolvendo manutenção mecânica de equipamentos de elevação de pequeno e grande porte (empilhadeiras), organiza local, máquinas, equipamentos, ferramentas e materiais, recebe e verifica ordens de serviço, verifica em procedimentos operacionais a execução de cada ordem de serviço, métodos, técnicas, equipamentos, ferramentas e produtos, retira de almoxarifado equipamentos, ferramentas e produtos, analisa, inspeciona, avalia e identifica condições e problemas em empilhadeiras, estuda o trabalho de reparação a ser realizado, desmonta e limpa partes, peças e acessórios, cuida da manutenção de órgãos de transmissão, freios, direção, suspensão, prepara peças para inspeção e reparação, substitui, ajusta, repara ou regula partes, peças e acessórios, efetua testes em empilhadeiras, executa inspeção final pós execução em empilhadeiras, efetua limpeza em empilhadeiras, solicita peças e equipamentos.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Caseiro",
+          "desc": "Cuidar da casa, executando pequenos serviços e acompanhando a execução de outros por terceiros, executar a limpeza das áreas em geral (varrer, lavar, etc).",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Mecânico de Refrigeração",
+          "desc": "Desenvolve atividades operacionais envolvendo manutenção mecânica de sistemas de resfriamento dos containers de congelamento (reefers), executa a inspeção nos sistemas de resfriamento dos containers de congelamento (reefers), verificando as condições de funcionamento, pressão dos compressores / gases de congelamento, tensão / corrente recebida no quadro elétrico do container, necessidades de reparos, executa os reparos necessários nos containers reefers.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Soldador",
+          "desc": "Executar solda Mig em partes dos containers metálicos, executar corte oxigás, executar o transporte manual dos equipamentos dentro da área de reparos, operar lixadeiras e esmerilhadeiras no preparo das superfícies dos containers, eventualmente, executar trabalhos em alturas e em locais confinados",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Controller de Entradas e Saídas de Containers",
+          "desc": "Desenvolve atividades administrativas envolvendo as áreas de controle de logística de contêineres, planeja, coordena e supervisiona as atividades de entrada e saída de containers, planeja, coordena e supervisiona a programação da logística de containers, acompanha a legislação sobre os assuntos pertinentes à sua área de atuação, prepara, emite e apresenta relatórios e demonstrativos de resultados, participa de reuniões, preenche planilhas e entrada de sistemas, determina regras e procedimentos em relação ao tráfego da frota de veículos da empresa, controla documentação da frota de veículos da empresa, acessa pátio para avaliação das condições da frota de veículos da empresa, participa de reuniões, elabora planilhas e relatórios, prepara indicadores e apresenta-os para a empresa.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Assistente de RH",
+          "desc": "Desenvolve atividades administrativas envolvendo suporte na área de recursos humanos, realiza o recrutamento e seleção de candidatos, divulga vagas e analisa currículos, realiza entrevistas e dinâmicas de grupo, faz a integração de novos colaboradores, mantém atualizados os registros e documentos dos funcionários, realiza o controle de frequência e folha de ponto, calcula e lança as informações para folha de pagamento, realiza o controle de benefícios e vale-transporte, faz o controle de férias e afastamentos, presta suporte aos funcionários em questões relacionadas a direitos trabalhistas, realiza pesquisas de clima organizacional, auxilia na elaboração de programas de treinamento e desenvolvimento, organiza eventos e ações de endomarketing, realiza a gestão de documentos e arquivos do setor, mantém a confidencialidade das informações dos funcionários, realiza o atendimento e esclarecimento de dúvidas dos funcionários, cumpre as normas e procedimentos da empresa.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Gerente RH",
+          "desc": "Desenvolve atividades administrativas envolvendo o gerenciamento do recursos humanos, supervisiona a equipe de rh, garantindo a execução correta das atividades, coordena processos de recrutamento e seleção, desde a triagem de currículos até a entrevista final, elabora e implementa políticas de rh alinhadas aos objetivos da empresa, desenvolve programas de treinamento e capacitação, gerencia o processo de integração de novos colaboradores, coordena avaliações de desempenho e feedbacks regulares, administra a folha de pagamento e benefícios, garantindo o cumprimento das obrigações legais, mantém atualizado o sistema de gestão de rh e os registros dos funcionários, resolve conflitos e promove um ambiente de trabalho harmonioso, implementa ações de endomarketing e iniciativas de bem-estar, supervisiona processos de desligamento e entrevistas de saída, assegura o cumprimento das normas trabalhistas e regulamentações vigentes, desenvolve e monitora indicadores de desempenho de rh.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Supervisor Operacional",
+          "desc": "Desenvolve atividades operacionais envolvendo supervisão de equipes de trabalho, supervisiona as equipes operacionais, coordena as atividades de limpeza, portaria e manutenção, monitora o desempenho e a produtividade das equipes, realiza a gestão de recursos humanos, atribuindo tarefas e responsabilidades, elabora escalas de trabalho e distribui as atividades de forma eficiente, promove treinamentos e capacitações para aprimorar as habilidades da equipe, avalia constantemente a qualidade dos serviços prestados, estabelece parcerias estratégicas com fornecedores, controla orçamentos e despesas, assegura o cumprimento rigoroso de normas de segurança e qualidade, participa de processos de seleção e contratação de pessoal, mantém uma comunicação eficaz com clientes e colaboradores, resolve prontamente questões operacionais e conflitos internos, implementa políticas de sustentabilidade e responsabilidade social, analisa relatórios operacionais e propõe melhorias nos processos.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Ajudante de Cozinha",
+          "desc": "Desenvolve atividades operacionais envolvendo auxílio e suporte na cozinha da lanchonete, prepara os ingredientes para as receitas, realiza o corte e a higienização dos alimentos, opera equipamentos como fritadeiras, chapa e micro-ondas, faz a montagem dos pratos e lanches, prepara porções e por vezes ajuda na elaboração de sobremesas, mantém a organização do ambiente, incluindo a limpeza de utensílios e áreas de trabalho, repõe os ingredientes e materiais conforme necessário, auxilia na gestão de estoque, registrando produtos utilizados, colabora na preparação de alimentos de acordo com os padrões estabelecidos, atende a solicitações dos atendentes de balcão ou garçons, cumpre as normas de higiene e segurança alimentar, pode ser responsável pelo pré-preparo de alimentos como descascar e cortar vegetais, auxilia na realização de inventários de produtos, apoia na coordenação com a equipe de cozinha para garantir o fluxo de trabalho eficiente.",
+          "riscos": "",
+          "exam": ""
+        },
+        {
+          "cargo": "Subgerente",
+          "desc": "Desenvolve atividades operacionais envolvendo gerenciamento da lanchonete, supervisiona as operações diárias do estabelecimento, garante que os procedimentos operacionais estejam sendo seguidos, gerencia a equipe, atribuindo tarefas e orientando quando necessário, controla o estoque de ingredientes e faz pedidos conforme demanda, assegura a qualidade dos produtos e o serviço ao cliente, lida com situações de atendimento ao cliente, buscando resolver problemas, treina novos funcionários nos procedimentos e políticas da lanchonete, monitora o cumprimento das normas de higiene e segurança, cria escalas de trabalho e gere os horários da equipe, mantém comunicação com fornecedores e realiza negociações, elabora relatórios de desempenho e vendas, colabora na definição de estratégias de marketing e promoções, toma decisões rápidas para resolver questões emergenciais, analisa métricas de desempenho e propõe melhorias, assegura que a lanchonete opere de acordo com os regulamentos e leis.",
+          "riscos": "",
+          "exam": ""
+        }
+      ]
+    </script>
+  </body>
+</html>
