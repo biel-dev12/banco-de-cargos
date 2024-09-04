@@ -1,9 +1,3 @@
-fetch('./db.json')
-    .then(response => {
-      return response.json();
-    })
-    .then(jsondata => console.log(jsondata.idade));
-
 document.addEventListener("DOMContentLoaded", function () {
   const jsond = document.getElementById("jsonD").textContent;
   const data = JSON.parse(jsond);
@@ -41,11 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   searchBtn.addEventListener("click", search);
 
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
-      search();
-    }
-  });
 });
 
 

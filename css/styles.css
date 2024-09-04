@@ -8,9 +8,14 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-p{
+p {
   margin: 0;
 }
+
+/* header{
+  width: 100%;
+  height: 7%;
+} */
 
 #main-content {
   position: relative;
@@ -37,7 +42,6 @@ p{
   z-index: 1;
 }
 
-
 .border {
   background: linear-gradient(#fff, #fff) padding-box,
     linear-gradient(230deg, #f17e13, #337ec1, #6aaf32) border-box;
@@ -52,16 +56,15 @@ p{
   justify-content: space-around;
   overflow-x: hidden;
   z-index: 2;
-
 }
-.container{
+.container {
   position: relative;
   background-color: #fff;
   width: 100%;
   height: 100%;
 }
 
-.container::before{
+.container::before {
   content: "";
   position: absolute;
   left: 0;
@@ -76,7 +79,7 @@ p{
   z-index: 2;
 }
 
-.form-box{
+.form-box {
   position: relative;
   z-index: 3;
   background-color: transparent;
@@ -86,28 +89,28 @@ p{
   padding: 2rem 1rem;
 }
 
-header{
+section.title {
   width: 100%;
   height: 10%;
   text-align: center;
-  letter-spacing: .15rem;
+  letter-spacing: 0.15rem;
   word-spacing: 1rem;
   font-size: 1.4rem;
   margin-bottom: 2rem;
   text-decoration: underline;
 }
 
-.search{
+.search {
   margin-bottom: 2rem;
   font-size: 1.2rem;
 }
 
-.search label{
+.search label {
   cursor: pointer;
   margin-bottom: 10px;
 }
 
-.search #searchInp{
+.search #searchInp {
   outline: none;
   border: none;
   border: 2px solid #ec801a;
@@ -116,15 +119,15 @@ header{
   font-size: 1.1rem;
   border-radius: 1rem;
   padding: 0 0.5rem;
-  transition: all .3s;
+  transition: all 0.3s;
   margin: 5px 0;
 }
 
-.search #searchInp:focus{
+.search #searchInp:focus {
   border: 2px solid #317bbd;
 }
 
-.search #searchBtn{
+.search #searchBtn {
   height: 2rem;
   font-size: 1rem;
   border-radius: 12px;
@@ -132,53 +135,53 @@ header{
   border: none;
   color: #fff;
   font-weight: 500;
-  letter-spacing:1px;
+  letter-spacing: 1px;
   cursor: pointer;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
-.search #searchInp:focus ~ #searchBtn{
+.search #searchInp:focus ~ #searchBtn {
   background-color: #317bbd;
 }
 
-.search #searchBtn:hover{
+.search #searchBtn:hover {
   background-color: #317bbd;
 }
-.search #searchBtn:active{
+.search #searchBtn:active {
   background-color: #6aaf32;
 }
 
-#print{
+#print {
   text-align: justify;
   display: flex;
   flex-direction: column;
 }
 
-#print .error{
+#print .error {
   font-size: 1.2rem;
   color: red;
   font-weight: bold;
   justify-self: center;
 }
 
-#print .cargo{
+#print .cargo {
   font-size: 1.5rem;
   font-weight: bold;
   align-self: center;
   margin-bottom: 1rem;
 }
 
-#print p span{
+#print p span {
   font-weight: bold;
   text-decoration: underline;
 }
 
-#print p{
+#print p {
   margin-bottom: 25px;
 }
 
-@media (min-width: 850px){
-  .border{
+@media (min-width: 850px) {
+  .border {
     width: 50%;
   }
 }
