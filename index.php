@@ -31,8 +31,8 @@ include_once("./php/config.php");
             </div>
             <nav class="nav" id="nav">
               <ul>
-                <li><a href="#"><i class="bi bi-search"></i>Pesquisar</a></li>
-                <li><a href="#"><i class="bi bi-plus-circle"></i>Adicionar</a></li>
+                <li><a href="" class="current"><i class="bi bi-search"></i>Pesquisar</a></li>
+                <li><a href="./pages/addCargo.php"><i class="bi bi-plus-circle"></i>Adicionar</a></li>
                 <li><a href="#"><i class="bi bi-trash3-fill"></i>Remover</a></li>
               </ul>
             </nav>
@@ -46,8 +46,8 @@ include_once("./php/config.php");
           </section>
           <section class="search">
             <label for="searchInp">Digite o cargo:</label>
-            <input type="text" id="searchInp" placeholder="Ex: Porteiro" />
-            <button type="submit" id="searchBtn">Pesquisar</button>
+            <input type="text" id="searchInp" class="inp" placeholder="Ex: Porteiro" />
+            <button type="submit" id="searchBtn" class="submit">Pesquisar</button>
           </section>
           <div id="print">
             <p class="error"></p>

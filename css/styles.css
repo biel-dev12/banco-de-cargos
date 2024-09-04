@@ -110,7 +110,7 @@ section.title {
   margin-bottom: 10px;
 }
 
-.search #searchInp {
+.search .inp {
   outline: none;
   border: none;
   border: 2px solid #ec801a;
@@ -123,11 +123,17 @@ section.title {
   margin: 5px 0;
 }
 
-.search #searchInp:focus {
+.search textarea.inp{
+  font-size: .9rem;
+  width: 40rem;
+  height: 10rem;
+}
+
+.search .inp:focus {
   border: 2px solid #317bbd;
 }
 
-.search #searchBtn {
+.search .submit {
   height: 2rem;
   font-size: 1rem;
   border-radius: 12px;
@@ -140,14 +146,14 @@ section.title {
   transition: all 0.3s;
 }
 
-.search #searchInp:focus ~ #searchBtn {
+.search .inp:focus ~ .submit {
   background-color: #317bbd;
 }
 
-.search #searchBtn:hover {
+.search .submit:hover {
   background-color: #317bbd;
 }
-.search #searchBtn:active {
+.search .submit:active {
   background-color: #6aaf32;
 }
 

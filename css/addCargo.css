@@ -1,0 +1,10 @@
+.search{
+    display: flex;
+    flex-direction: column;
+}
+
+.search #addCargo{
+    align-self: center;
+    width: 10rem;
+    font-weight: bold;
+}
