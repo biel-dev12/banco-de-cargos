@@ -14,7 +14,7 @@ include_once("../php/config.php");
     <link rel="stylesheet" href="../css/menuHamb.css" />
     <link
         rel="shortcut icon"
-        href="./imgs/fav-doctors.svg"
+        href="../imgs/fav-doctors.svg"
         type="image/x-icon" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="../services/addCargo.js" defer></script>
