@@ -17,7 +17,7 @@ include_once("../php/config.php");
         href="./imgs/fav-doctors.svg"
         type="image/x-icon" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="./services/api.js" type="text/javascript" defer></script>
+    <script src="../services/addCargo.js" defer></script>
 </head>
 
 <body>
