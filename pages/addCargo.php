@@ -8,7 +8,7 @@ include_once("../php/config.php");
 
 <head>
     <meta charset="UTF-8" />
-    <title>Banco de Cargos</title>
+    <title>Adicionar Cargo</title>
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/addCargo.css" />
     <link rel="stylesheet" href="../css/menuHamb.css" />
@@ -36,7 +36,7 @@ include_once("../php/config.php");
                             <ul>
                                 <li><a href="../index.php" class="current"><i class="bi bi-search"></i>Pesquisar</a></li>
                                 <li><a href=""><i class="bi bi-plus-circle"></i>Adicionar</a></li>
-                                <li><a href="#"><i class="bi bi-trash3-fill"></i>Remover</a></li>
+                                <li><a href="./deleteCargo.php"><i class="bi bi-trash3-fill"></i>Remover</a></li>
                             </ul>
                         </nav>
                     </div>
