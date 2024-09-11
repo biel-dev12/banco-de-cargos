@@ -158,7 +158,7 @@ section.title {
   flex-direction: column;
 }
 
-#print .error {
+#print .error, #print .msg {
   font-size: 1.2rem;
   color: red;
   font-weight: bold;

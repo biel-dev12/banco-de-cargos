@@ -14,7 +14,7 @@ include_once("../php/config.php");
     href="../imgs/fav-doctors.svg"
     type="image/x-icon" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <script src="../services/api.js" type="text/javascript" defer></script>
+  <script src="../services/deleteCargo.js" type="text/javascript" defer></script>
 </head>
 
 <body>
@@ -47,10 +47,12 @@ include_once("../php/config.php");
           <section class="search">
             <label for="deleteInp">Digite o cargo:</label>
             <input type="text" id="deleteInp" class="inp" placeholder="Ex: Porteiro" />
-            <button type="submit" id="deleteBtn" class="submit">Pesquisar</button>
+            <button type="submit" id="deleteBtn" class="submit">Remover</button>
           </section>
           <div id="print">
-            <p class="msg"></p>
+            <p class="msg" style="font-size: 1.2rem; color: red;
+  font-weight: bold;
+  justify-self: center;"></p>
           </div>
         </main>
       </section>
